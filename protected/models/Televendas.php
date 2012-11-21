@@ -7,6 +7,7 @@
  * @property integer $id
  * @property string $razaoSocial
  * @property string $cnpj
+ * @property integer $ddd
  * @property integer $telefone
  * @property string $cidade
  * @property string $estado
@@ -41,14 +42,14 @@ class Televendas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('razaoSocial, cnpj, telefone, cidade, estado, email, orcamentoDesejado', 'required'),
-			array('telefone', 'numerical', 'integerOnly'=>true),
+			array('razaoSocial, cnpj, ddd, telefone, cidade, estado, email, orcamentoDesejado', 'required'),
+			array('estado, cidade, ddd, telefone', 'numerical', 'integerOnly'=>true),
 			array('razaoSocial', 'length', 'max'=>100),
 			array('cnpj', 'length', 'max'=>20),
-			array('cidade, estado, email, orcamentoDesejado', 'length', 'max'=>50),
+			array('email, orcamentoDesejado', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, razaoSocial, cnpj, telefone, cidade, estado, email, orcamentoDesejado', 'safe', 'on'=>'search'),
+			array('id, razaoSocial, cnpj, ddd, telefone, cidade, estado, email, orcamentoDesejado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,6 +73,7 @@ class Televendas extends CActiveRecord
 			'id' => 'ID',
 			'razaoSocial' => 'Razão Social',
 			'cnpj' => 'CNPJ',
+			'ddd' => 'DDD',
 			'telefone' => 'Telefone',
 			'cidade' => 'Cidade',
 			'estado' => 'Estado',
@@ -94,6 +96,7 @@ class Televendas extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('razaoSocial',$this->razaoSocial,true);
 		$criteria->compare('cnpj',$this->cnpj,true);
+		$criteria->compare('ddd',$this->ddd);
 		$criteria->compare('telefone',$this->telefone);
 		$criteria->compare('cidade',$this->cidade,true);
 		$criteria->compare('estado',$this->estado,true);

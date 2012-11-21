@@ -17,6 +17,10 @@
 	<?php echo CHtml::encode($data->cnpj); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('ddd')); ?>:</b>
+	<?php echo CHtml::encode($data->ddd); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('telefone')); ?>:</b>
 	<?php echo CHtml::encode($data->telefone); ?>
 	<br />
@@ -29,11 +33,11 @@
 	<?php echo CHtml::encode($data->estado); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('orcamentoDesejado')); ?>:</b>
 	<?php echo CHtml::encode($data->orcamentoDesejado); ?>
 	<br />

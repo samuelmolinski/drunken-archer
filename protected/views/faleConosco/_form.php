@@ -34,6 +34,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'ddd'); ?>
+		<?php echo $form->textField($model,'ddd'); ?>
+		<?php echo $form->error($model,'ddd'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'telefone'); ?>
 		<?php echo $form->textField($model,'telefone'); ?>
 		<?php echo $form->error($model,'telefone'); ?>

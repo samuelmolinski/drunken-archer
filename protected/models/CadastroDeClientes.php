@@ -6,7 +6,11 @@
  * The followings are the available columns in table 'cadastroDeClientes':
  * @property integer $id
  * @property string $nomeCompleto
- * @property string $enderecoCompleto
+ * @property string $endereco
+ * @property string $bairro
+ * @property integer $estado
+ * @property integer $cidade
+ * @property integer $cep
  * @property string $email
  * @property string $cpf
  * @property string $dataDeNascimento
@@ -15,17 +19,24 @@
  * @property string $profissao
  * @property string $estadaCivil
  * @property string $documentoDeIdentidade
+ * @property integer $ddd
  * @property integer $telefone
+ * @property integer $dddc
  * @property integer $celular
  * @property integer $ofertasDeSMS
  * @property integer $ofertasDeEmail
  */
 class CadastroDeClientes extends CActiveRecord
 {
+	public $complemento;
+	public $n;
+	public $rua;
+
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return cadastroDeClientes the static model class
+	 * @return CadastroDeClientes the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -48,14 +59,15 @@ class CadastroDeClientes extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nomeCompleto, enderecoCompleto, email, cpf, dataDeNascimento, sexo, escolaridade, profissao, estadaCivil, documentoDeIdentidade, telefone, celular, ofertasDeSMS, ofertasDeEmail', 'required'),
-			array('sexo, telefone, celular, ofertasDeSMS, ofertasDeEmail', 'numerical', 'integerOnly'=>true),
-			array('nomeCompleto, enderecoCompleto, email, escolaridade, profissao', 'length', 'max'=>50),
+			array('nomeCompleto, endereco, bairro, cep, email, cpf, dataDeNascimento, escolaridade, profissao, estadaCivil, documentoDeIdentidade, ddd, telefone, dddc, celular, ofertasDeSMS, ofertasDeEmail', 'required'),
+			array('estado, cidade, cep,  ddd, telefone, dddc, celular, ofertasDeSMS, ofertasDeEmail', 'numerical', 'integerOnly'=>true),
+			array('nomeCompleto, endereco, email, escolaridade, sexo, profissao', 'length', 'max'=>50),
+			array('bairro', 'length', 'max'=>256),
 			array('cpf', 'length', 'max'=>11),
 			array('estadaCivil, documentoDeIdentidade', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nomeCompleto, enderecoCompleto, email, cpf, dataDeNascimento, sexo, escolaridade, profissao, estadaCivil, documentoDeIdentidade, telefone, celular, ofertasDeSMS, ofertasDeEmail', 'safe', 'on'=>'search'),
+			array('id, nomeCompleto, endereco, bairro, estado, cidade, cep, email, cpf, dataDeNascimento, sexo, escolaridade, profissao, estadaCivil, documentoDeIdentidade, ddd, telefone, dddc, celular, ofertasDeSMS, ofertasDeEmail', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,19 +89,26 @@ class CadastroDeClientes extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'rua' => 'Rua',
+			'complemento' => 'Complemento',
+			'n' => 'Nº',
 			'nomeCompleto' => 'Nome Completo',
-			'enderecoCompleto' => 'Endereco Completo',
+			'endereco' => 'Endereco',
+			'bairro' => 'Bairro',
+			'cep' => 'CEP',
 			'email' => 'Email',
-			'cpf' => 'Cpf',
+			'cpf' => 'CPF',
 			'dataDeNascimento' => 'Data De Nascimento',
 			'sexo' => 'Sexo',
 			'escolaridade' => 'Escolaridade',
-			'profissao' => 'Profissao',
-			'estadaCivil' => 'Estada Civil',
+			'profissao' => 'Profissão',
+			'estadaCivil' => 'Estado Civil',
 			'documentoDeIdentidade' => 'Documento De Identidade',
+			'ddd' => 'DDD',
 			'telefone' => 'Telefone',
+			'dddc' => 'DDD',
 			'celular' => 'Celular',
-			'ofertasDeSMS' => 'Ofertas De Sms',
+			'ofertasDeSMS' => 'Ofertas De SMS',
 			'ofertasDeEmail' => 'Ofertas De Email',
 		);
 	}
@@ -107,7 +126,11 @@ class CadastroDeClientes extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nomeCompleto',$this->nomeCompleto,true);
-		$criteria->compare('enderecoCompleto',$this->enderecoCompleto,true);
+		$criteria->compare('endereco',$this->endereco,true);
+		$criteria->compare('bairro',$this->bairro,true);
+		$criteria->compare('estado',$this->estado);
+		$criteria->compare('cidade',$this->cidade);
+		$criteria->compare('cep',$this->cep);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('cpf',$this->cpf,true);
 		$criteria->compare('dataDeNascimento',$this->dataDeNascimento,true);
@@ -116,7 +139,9 @@ class CadastroDeClientes extends CActiveRecord
 		$criteria->compare('profissao',$this->profissao,true);
 		$criteria->compare('estadaCivil',$this->estadaCivil,true);
 		$criteria->compare('documentoDeIdentidade',$this->documentoDeIdentidade,true);
+		$criteria->compare('ddd',$this->ddd);
 		$criteria->compare('telefone',$this->telefone);
+		$criteria->compare('dddc',$this->dddc);
 		$criteria->compare('celular',$this->celular);
 		$criteria->compare('ofertasDeSMS',$this->ofertasDeSMS);
 		$criteria->compare('ofertasDeEmail',$this->ofertasDeEmail);

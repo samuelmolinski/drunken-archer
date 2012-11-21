@@ -8,7 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'televendas-form',
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=> true,
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -25,6 +25,12 @@
 		<?php echo $form->labelEx($model,'cnpj'); ?>
 		<?php echo $form->textField($model,'cnpj',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'cnpj'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'ddd'); ?>
+		<?php echo $form->textField($model,'ddd'); ?>
+		<?php echo $form->error($model,'ddd'); ?>
 	</div>
 
 	<div class="row">

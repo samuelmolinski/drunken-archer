@@ -24,6 +24,7 @@ $this->menu=array(
 		'id',
 		'razaoSocial',
 		'cnpj',
+		'ddd',
 		'telefone',
 		'cidade',
 		'estado',

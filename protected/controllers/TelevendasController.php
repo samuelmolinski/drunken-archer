@@ -65,8 +65,7 @@ class TelevendasController extends Controller
 		$model=new Televendas;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
+		$this->performAjaxValidation($model);
 		if(isset($_POST['Televendas']))
 		{
 			$model->attributes=$_POST['Televendas'];

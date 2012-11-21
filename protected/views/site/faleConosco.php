@@ -1,51 +1,80 @@
-<?php
-	$form = $this -> beginWidget('CActiveForm', array(
-		'id' => 'cadastroDeClients-form',
-		'enableAjaxValidation' => false,
-	));
-?>
-  
-<?php echo $form->textField($model, 'nome', array('value'=>'Nome completo', 'class'=>'g required', 'onfocus' => 'limpaInputs(this,\'Nome completo\')', 'onblur' => 'voltaInputs(this,\'Nome completo\')')); ?>
+<div class="middleContainer">
+	<div class="pgTitle clearfix">
+		<h2>Fale Conosco</h2>
+	</div>
+</div><!--middleContainer-->
+<div class="middleContainer">
+	<?php
+		$form = $this -> beginWidget('CActiveForm', array(
+			'id' => 'faleConosco-form',
+			'enableAjaxValidation' => false,
+		));
 
+	?>
 
-<div id="UpdatePanel1">	
-    <span class="clearfix" style="margin-left: 6px;">
-        <span class="campo select bgselect">
-            <span class="bgselectright" style="width: 45px;">
-                <span id="lblUf">UF</span>
-                <?php echo $form->dropDownList($model, 'uf', $states, array('value'=>'uf', 'class'=>'g required')); ?>
-                
-	        </span>
-        </span>
-    </span>							                        
-</div>
-<span class="campo gg">      
-	<?php echo $form->textField($model, 'cidade', array('value'=>'Cidade', 'class'=>'g required', 'onfocus' => 'limpaInputs(this,\'Cidade\')', 'onblur' => 'voltaInputs(this,\'Cidade\')')); ?>
-</span>
-<span style="float:left;clear:both;">
-    <label style="color:#777777;">Já doou para a MSF?</label>
-    <br>
+	<?php echo $form->errorSummary($model); ?>
 
-    <table id="rbtDoou" cellspacing="2" cellpadding="2" border="0"  style="float:left;clear:both;">
-		<tbody>
-			<tr>
-				<td><span style="color: rgb(119, 119, 119);">
-					<?php echo $form->radioButton($model, 'jahFezDoacoes', array('value'=>'1', 'id'=>'Newsletter_jahFezDoacoes01', 'class'=>'required')); ?>
-					<label for="rbtDoou_0">Sim</label></span>
-				</td>
-				<td>
-					<span style="color: rgb(119, 119, 119);">
-						<?php echo $form->radioButton($model, 'jahFezDoacoes', array('value'=>'0', 'id'=>'Newsletter_jahFezDoacoes02', 'class'=>'required')); ?>
-						<label for="rbtDoou_1">Não</label>
-					</span>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</span>
-<input type='button' name="btnGravarUsuario" class="bot-enviar btn" id="btnGravarUsuario-fake" />
-<?php
-	echo CHtml::submitButton('', array('id'=>'btnGravarUsuario', 'name'=>"btnGravarUsuario", 'style'=>'display:none;'));
-?>
-<!-- <input type="image" name="btnGravarUsuario" id="btnGravarUsuario" class="bot-enviar" src="https://www.msf.org.br/imagens/botoes/bot-enviar-news.gif" onclick="return validaNewsLetterHome();" style="border-width:0px;"> -->
-<?php $this -> endWidget(); ?>
+	<div id="columnLeft50" class="cabanaforms">
+		<div class="grp">
+			<?php echo $form->labelEx($model,'nome', array('class' => 'obr')); ?>
+			<?php echo $form->textField($model, 'nome', array('value'=>'', 'class'=>'fitext required')); ?>
+			<!-- <?php echo $form->error($model,'nome'); ?> -->
+		</div> 
+
+		<div class="grp">
+			<?php echo $form->labelEx($model,'email'); ?>
+			<?php echo $form->textField($model, 'email', array('value'=>'', 'class'=>'fitext required')); ?>
+			<!-- <?php echo $form->error($model,'email'); ?> -->
+		</div>
+
+		<div class="grp">
+			<?php echo $form->labelEx($model,'cpf'); ?>
+			<?php echo $form->textField($model, 'cpf', array('value'=>'', 'class'=>'fitext required onlyInt')); ?>
+			<!-- <?php echo $form->error($model,'cpf'); ?> -->
+		</div>
+
+		<div class="grp fMulti fTelefone">
+			<?php echo $form->labelEx($model,'telefone'); ?>
+			<?php echo $form->textField($model, 'ddd', array('value'=>'', 'class'=>'DDD required onlyInt', 'maxlength'=>2)); ?>
+			<?php echo $form->textField($model, 'telefone', array('value'=>'', 'class'=>' required onlyInt', 'maxlength'=>9)); ?>
+			<!-- <?php echo $form->error($model,'ddd'); ?> -->
+			<!-- <?php echo $form->error($model,'telefone'); ?> -->
+		</div>
+
+		<div class="grp">
+			<?php echo $form->labelEx($model,'estado'); ?>
+			<?php echo $form->dropDownList($model,'estado', CHtml::listData(Estados::model()->findAll(), 'id', 'nome'), array('empty'=>'Selecione um estado')); ?>
+			<!-- <?php echo $form->error($model,'estado'); ?> -->
+		</div>
+	</div>
+	<div id="columnRight50" class="cabanaforms">
+		<div class="grp">
+			<?php echo $form->labelEx($model,'cidade'); ?>
+			<?php echo $form->dropDownList($model, 'cidade', array('empty'=>'Selecione uma cidade'), array('value'=>'', 'class'=>'required')); ?>
+			<!-- <?php echo $form->error($model,'cidade'); ?> -->
+		</div>
+
+		<div class="grp">
+			<?php echo $form->labelEx($model,'loja'); ?>
+			<?php echo $form->textField($model, 'loja', array('value'=>'', 'class'=>'fitext required')); ?>
+			<!-- <?php echo $form->error($model,'loja'); ?> -->
+		</div>
+
+		<div class="grp">
+			<?php echo $form->labelEx($model,'assunto'); ?>
+			<?php echo $form->dropDownList($model, 'assunto', array('informacoes'=>'Informações','sugestoes'=>'Sugestões','elogios'=>'Elogios','criticas'=>'Críticas','comentarios'=>'Comentários'), array('value'=>'', 'class'=>'required')); ?>
+			<!-- <?php echo $form->error($model,'assunto'); ?> -->
+		</div>
+
+		<div class="grp">
+			<?php echo $form->labelEx($model,'messagem'); ?>
+			<?php echo $form->textArea($model, 'messagem', array('value'=>'', 'class'=>'required')); ?>
+			<!-- <?php echo $form->error($model,'messagem'); ?> -->
+		</div>
+
+		<div class="grp enviar">
+			<?php echo CHtml::submitButton('', array('id'=>'btnGravarUsuario', 'class'=>'bt', 'name'=>"btnGravar", 'value'=>'Enviar'));//  ?>
+		</div>
+	</div>
+	<?php $this -> endWidget(); ?>
+</div><!--middleContainer-->

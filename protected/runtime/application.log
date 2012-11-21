@@ -276,3 +276,616 @@ Stack trace:
 REQUEST_URI=/telhanorte/index.php/cidades/getCities
 HTTP_REFERER=http://localhost/telhanorte/index.php/site/televendas
 ---
+2012/11/19 12:32:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Cidade/generateFromState".' in C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Cidade/generate...')
+#1 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/telhanorte/index.php/Cidade/generateFromState
+HTTP_REFERER=http://192.168.0.22/telhanorte/index.php/site/televendas
+---
+2012/11/19 13:06:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'RJ' in 'where clause'. The SQL statement executed was: SELECT id, nome FROM `cidades` `t` WHERE id_uf=RJ ORDER BY nome DESC.
+2012/11/19 13:06:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'RJ' in 'where clause'' in C:\wamp\www\telhanorte\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\telhanorte\protected\controllers\CidadesController.php(180): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): CidadesController->actionGetCities()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\telhanorte\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\telhanorte\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('GetCities')
+#14 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Cidades/GetCiti...')
+#15 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/telhanorte/index.php/Cidades/GetCities
+HTTP_REFERER=http://192.168.0.22/telhanorte/index.php/site/televendas
+---
+2012/11/19 13:07:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'RJ' in 'where clause'. The SQL statement executed was: SELECT id, nome FROM `cidades` `t` WHERE id_uf=RJ ORDER BY nome DESC.
+2012/11/19 13:07:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'RJ' in 'where clause'' in C:\wamp\www\telhanorte\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\telhanorte\protected\controllers\CidadesController.php(180): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): CidadesController->actionGetCities()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\telhanorte\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\telhanorte\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('GetCities')
+#14 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Cidades/GetCiti...')
+#15 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/telhanorte/index.php/Cidades/GetCities
+HTTP_REFERER=http://192.168.0.22/telhanorte/index.php/site/televendas
+---
+2012/11/19 13:12:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Cidade/generateFromState".' in C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Cidade/generate...')
+#1 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/telhanorte/index.php/Cidade/generateFromState
+HTTP_REFERER=http://192.168.0.22/telhanorte/index.php/site/televendas
+---
+2012/11/19 13:23:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Cidade/generateFromState".' in C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Cidade/generate...')
+#1 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/telhanorte/index.php/Cidade/generateFromState
+HTTP_REFERER=http://192.168.0.22/telhanorte/index.php/site/televendas
+---
+2012/11/19 13:41:13 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php:1960)
+Stack trace:
+#0 C:\wamp\www\telhanorte\protected\views\site\televendas.php(25): CActiveForm->dropDownList()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): SiteController->renderFile()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): SiteController->renderPartial()
+#5 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(75): SiteController->render()
+#6 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTelevendas()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#9 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#10 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#11 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#12 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/televendas
+2012/11/19 14:15:54 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.class" is not defined.' in C:\wamp\www\telhanorte\yii\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CWidgetFactory.php(162): CComponent->__set('class', 'cabanaforms')
+#1 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(SiteController), 'CActiveForm', Array)
+#2 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(190): CBaseController->createWidget('CActiveForm', Array)
+#3 C:\wamp\www\telhanorte\protected\views\site\televendas.php(6): CBaseController->beginWidget('CActiveForm', Array)
+#4 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require('C:\wamp\www\tel...')
+#5 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\tel...', Array, true)
+#6 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\tel...', Array, true)
+#7 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): CController->renderPartial('televendas', Array, true)
+#8 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(75): CController->render('televendas', Array)
+#9 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTelevendas()
+#10 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('televendas')
+#14 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/televendas')
+#15 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/telhanorte/index.php/site/televendas
+---
+2012/11/19 14:31:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in C:\wamp\www\telhanorte\yii\framework\gii\GiiModule.php:169
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('')
+#2 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii')
+#3 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/telhanorte/index.php/gii
+---
+2012/11/19 18:07:54 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "cadastroDeClientes".' in C:\wamp\www\telhanorte\yii\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): CController->renderPartial('cadastroDeClien...', Array, true)
+#1 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(64): CController->render('cadastroDeClien...', Array)
+#2 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('cadastroDeClien...')
+#7 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/cadastroDe...')
+#8 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+---
+2012/11/19 18:08:26 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "cadastroDeClientes".' in C:\wamp\www\telhanorte\yii\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): CController->renderPartial('cadastroDeClien...', Array, true)
+#1 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(64): CController->render('cadastroDeClien...', Array)
+#2 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('CadastroDeClien...')
+#7 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/CadastroDe...')
+#8 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/telhanorte/index.php/site/CadastroDeClientes
+---
+2012/11/19 18:08:49 [error] [exception.CException] exception 'CException' with message 'Property "CadastroDeClientes.rua" is not defined.' in C:\wamp\www\telhanorte\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('rua')
+#1 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('rua')
+#2 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1515): CHtml::resolveValue(Object(CadastroDeClientes), 'rua')
+#3 C:\wamp\www\telhanorte\yii\framework\web\widgets\CActiveForm.php(764): CHtml::activeDropDownList(Object(CadastroDeClientes), 'rua', Array, Array)
+#4 C:\wamp\www\telhanorte\protected\views\site\cadastroDeClientes.php(37): CActiveForm->dropDownList(Object(CadastroDeClientes), 'rua', Array, Array)
+#5 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require('C:\wamp\www\tel...')
+#6 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\tel...', Array, true)
+#7 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\tel...', Array, true)
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): CController->renderPartial('cadastroDeClien...', Array, true)
+#9 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(64): CController->render('cadastroDeClien...', Array)
+#10 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#11 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('CadastroDeClien...')
+#15 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/CadastroDe...')
+#16 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#18 {main}
+REQUEST_URI=/telhanorte/index.php/site/CadastroDeClientes
+---
+2012/11/19 18:10:18 [error] [exception.CException] exception 'CException' with message 'Property "CadastroDeClientes.estado" is not defined.' in C:\wamp\www\telhanorte\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('estado')
+#1 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('estado')
+#2 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1515): CHtml::resolveValue(Object(CadastroDeClientes), 'estado')
+#3 C:\wamp\www\telhanorte\yii\framework\web\widgets\CActiveForm.php(764): CHtml::activeDropDownList(Object(CadastroDeClientes), 'estado', Array, Array)
+#4 C:\wamp\www\telhanorte\protected\views\site\cadastroDeClientes.php(103): CActiveForm->dropDownList(Object(CadastroDeClientes), 'estado', Array, Array)
+#5 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require('C:\wamp\www\tel...')
+#6 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\tel...', Array, true)
+#7 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\tel...', Array, true)
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): CController->renderPartial('cadastroDeClien...', Array, true)
+#9 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(64): CController->render('cadastroDeClien...', Array)
+#10 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#11 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('CadastroDeClien...')
+#15 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/CadastroDe...')
+#16 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#18 {main}
+REQUEST_URI=/telhanorte/index.php/site/CadastroDeClientes
+---
+2012/11/19 18:20:14 [error] [exception.CException] exception 'CException' with message 'Property "CadastroDeClientes.assunto" is not defined.' in C:\wamp\www\telhanorte\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('assunto')
+#1 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('assunto')
+#2 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1515): CHtml::resolveValue(Object(CadastroDeClientes), 'assunto')
+#3 C:\wamp\www\telhanorte\yii\framework\web\widgets\CActiveForm.php(764): CHtml::activeDropDownList(Object(CadastroDeClientes), 'assunto', Array, Array)
+#4 C:\wamp\www\telhanorte\protected\views\site\cadastroDeClientes.php(118): CActiveForm->dropDownList(Object(CadastroDeClientes), 'assunto', Array, Array)
+#5 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require('C:\wamp\www\tel...')
+#6 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\tel...', Array, true)
+#7 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\tel...', Array, true)
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): CController->renderPartial('cadastroDeClien...', Array, true)
+#9 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(64): CController->render('cadastroDeClien...', Array)
+#10 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#11 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('CadastroDeClien...')
+#15 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/CadastroDe...')
+#16 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#18 {main}
+REQUEST_URI=/telhanorte/index.php/site/CadastroDeClientes
+---
+2012/11/19 18:30:32 [error] [exception.CException] exception 'CException' with message 'Property "CadastroDeClientes.assunto" is not defined.' in C:\wamp\www\telhanorte\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('assunto')
+#1 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('assunto')
+#2 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1515): CHtml::resolveValue(Object(CadastroDeClientes), 'assunto')
+#3 C:\wamp\www\telhanorte\yii\framework\web\widgets\CActiveForm.php(764): CHtml::activeDropDownList(Object(CadastroDeClientes), 'assunto', Array, Array)
+#4 C:\wamp\www\telhanorte\protected\views\site\cadastroDeClientes.php(127): CActiveForm->dropDownList(Object(CadastroDeClientes), 'assunto', Array, Array)
+#5 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require('C:\wamp\www\tel...')
+#6 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\tel...', Array, true)
+#7 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\tel...', Array, true)
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): CController->renderPartial('cadastroDeClien...', Array, true)
+#9 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(64): CController->render('cadastroDeClien...', Array)
+#10 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#11 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('CadastroDeClien...')
+#15 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/CadastroDe...')
+#16 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#18 {main}
+REQUEST_URI=/telhanorte/index.php/site/CadastroDeClientes
+---
+2012/11/19 19:17:42 [error] [php] Undefined index: Televendas (C:\wamp\www\telhanorte\protected\controllers\SiteController.php:98)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/televendas
+2012/11/19 19:40:39 [error] [php] Undefined variable: form (C:\wamp\www\telhanorte\protected\views\site\televendas.php:52)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(112): SiteController->render()
+#3 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTelevendas()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/televendas
+2012/11/19 19:51:42 [error] [php] Undefined index: razaoSocial (C:\wamp\www\telhanorte\protected\controllers\SiteController.php:103)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/televendas
+2012/11/19 20:15:06 [error] [php] urlencode() expects parameter 1 to be string, object given (C:\wamp\www\telhanorte\yii\framework\web\CUrlManager.php:438)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CUrlManager.php(785): CUrlManager->createPathInfo()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CUrlManager.php(300): CUrlRule->createUrl()
+#2 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(524): CUrlManager->createUrl()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(968): CWebApplication->createUrl()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(1029): SiteController->createUrl()
+#5 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(105): SiteController->redirect()
+#6 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTelevendas()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#9 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#10 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#11 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#12 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/televendas
+2012/11/19 20:16:00 [error] [php] urlencode() expects parameter 1 to be string, object given (C:\wamp\www\telhanorte\yii\framework\web\CUrlManager.php:438)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CUrlManager.php(785): CUrlManager->createPathInfo()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CUrlManager.php(300): CUrlRule->createUrl()
+#2 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(524): CUrlManager->createUrl()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(968): CWebApplication->createUrl()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(1029): SiteController->createUrl()
+#5 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(105): SiteController->redirect()
+#6 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTelevendas()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#9 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#10 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#11 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#12 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/televendas
+2012/11/19 20:18:10 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY nome DESC' at line 1. A declaração SQL executada foi: SELECT id, nome FROM `cidades` `t` WHERE id_uf= ORDER BY nome DESC.
+2012/11/19 20:18:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY nome DESC' at line 1' in C:\wamp\www\telhanorte\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\telhanorte\protected\controllers\CidadesController.php(180): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): CidadesController->actionGetCities()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\telhanorte\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\telhanorte\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('GetCities')
+#14 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Cidades/GetCiti...')
+#15 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/telhanorte/index.php/Cidades/GetCities
+HTTP_REFERER=http://192.168.0.22/telhanorte/index.php/site/televendas
+---
+2012/11/20 12:16:41 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "performAjaxValidation".' in C:\wamp\www\telhanorte\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(108): CComponent->__call('performAjaxVali...', Array)
+#1 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(108): SiteController->performAjaxValidation(Object(Televendas))
+#2 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTelevendas()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('televendas')
+#7 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/televendas')
+#8 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/telhanorte/index.php/site/televendas
+---
+2012/11/20 19:16:24 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php:85)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(140): renderAttributes()
+#1 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1135): tag()
+#2 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(727): inputField()
+#3 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(882): checkBox()
+#4 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1625): checkBoxList()
+#5 C:\wamp\www\telhanorte\yii\framework\web\widgets\CActiveForm.php(796): activeCheckBoxList()
+#6 C:\wamp\www\telhanorte\protected\views\site\cadastroDeClientes.php(156): CActiveForm->checkBoxList()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#9 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): SiteController->renderFile()
+#10 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): SiteController->renderPartial()
+#11 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(76): SiteController->render()
+#12 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#13 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#15 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#17 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#18 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/CadastroDeClientes
+2012/11/20 19:23:42 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php:85)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(140): renderAttributes()
+#1 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1135): tag()
+#2 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(727): inputField()
+#3 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(882): checkBox()
+#4 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1625): checkBoxList()
+#5 C:\wamp\www\telhanorte\yii\framework\web\widgets\CActiveForm.php(796): activeCheckBoxList()
+#6 C:\wamp\www\telhanorte\protected\views\site\cadastroDeClientes.php(161): CActiveForm->checkBoxList()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#9 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): SiteController->renderFile()
+#10 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): SiteController->renderPartial()
+#11 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(76): SiteController->render()
+#12 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#13 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#15 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#17 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#18 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/CadastroDeClientes
+2012/11/20 19:24:08 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php:85)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(140): renderAttributes()
+#1 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1135): tag()
+#2 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(727): inputField()
+#3 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(882): checkBox()
+#4 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1625): checkBoxList()
+#5 C:\wamp\www\telhanorte\yii\framework\web\widgets\CActiveForm.php(796): activeCheckBoxList()
+#6 C:\wamp\www\telhanorte\protected\views\site\cadastroDeClientes.php(161): CActiveForm->checkBoxList()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#9 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): SiteController->renderFile()
+#10 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): SiteController->renderPartial()
+#11 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(76): SiteController->render()
+#12 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#13 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#15 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#17 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#18 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/CadastroDeClientes
+2012/11/20 19:25:50 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php:85)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(140): renderAttributes()
+#1 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1135): tag()
+#2 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(727): inputField()
+#3 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(882): checkBox()
+#4 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1625): checkBoxList()
+#5 C:\wamp\www\telhanorte\yii\framework\web\widgets\CActiveForm.php(796): activeCheckBoxList()
+#6 C:\wamp\www\telhanorte\protected\views\site\cadastroDeClientes.php(161): CActiveForm->checkBoxList()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#9 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): SiteController->renderFile()
+#10 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): SiteController->renderPartial()
+#11 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(76): SiteController->render()
+#12 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#13 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#15 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#17 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#18 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/CadastroDeClientes
+2012/11/20 19:28:55 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php:85)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(140): renderAttributes()
+#1 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1135): tag()
+#2 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(727): inputField()
+#3 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(882): checkBox()
+#4 C:\wamp\www\telhanorte\yii\framework\web\helpers\CHtml.php(1625): checkBoxList()
+#5 C:\wamp\www\telhanorte\yii\framework\web\widgets\CActiveForm.php(796): activeCheckBoxList()
+#6 C:\wamp\www\telhanorte\protected\views\site\cadastroDeClientes.php(161): CActiveForm->checkBoxList()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#9 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): SiteController->renderFile()
+#10 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): SiteController->renderPartial()
+#11 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(76): SiteController->render()
+#12 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#13 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#15 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#17 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#18 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/CadastroDeClientes
+2012/11/20 19:40:23 [error] [php] Missing argument 1 for SiteController::performAjaxValidation(), called in C:\wamp\www\telhanorte\protected\controllers\SiteController.php on line 65 and defined (C:\wamp\www\telhanorte\protected\controllers\SiteController.php:190)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#5 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+2012/11/20 20:27:04 [error] [php] Undefined index: CadastroDeClientes[rua] (C:\wamp\www\telhanorte\protected\controllers\SiteController.php:66)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+2012/11/20 20:44:22 [error] [php] Undefined index: CadastroDeClientes[rua] (C:\wamp\www\telhanorte\protected\controllers\SiteController.php:66)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+2012/11/20 20:45:11 [error] [php] Undefined index: CadastroDeClientes[rua] (C:\wamp\www\telhanorte\protected\controllers\SiteController.php:66)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+2012/11/20 20:45:24 [error] [php] Undefined index: CadastroDeClientes[rua] (C:\wamp\www\telhanorte\protected\controllers\SiteController.php:66)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+2012/11/20 20:51:53 [error] [php] Undefined index: CadastroDeClientes[rua] (C:\wamp\www\telhanorte\protected\controllers\SiteController.php:67)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+2012/11/20 20:53:31 [error] [php] Undefined index: CadastroDeClientes[rua] (C:\wamp\www\telhanorte\protected\controllers\SiteController.php:66)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+2012/11/20 20:56:02 [error] [php] Array to string conversion (C:\wamp\www\telhanorte\yii\framework\validators\CNumberValidator.php:84)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(795): CadastroDeClientes->validate()
+#1 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(86): CadastroDeClientes->save()
+#2 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#6 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#8 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+2012/11/20 20:56:27 [error] [php] Undefined index: profissao (C:\wamp\www\telhanorte\protected\controllers\SiteController.php:76)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+2012/11/20 20:56:44 [error] [php] Array to string conversion (C:\wamp\www\telhanorte\yii\framework\validators\CNumberValidator.php:84)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(795): CadastroDeClientes->validate()
+#1 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(86): CadastroDeClientes->save()
+#2 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionCadastroDeClientes()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#6 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#8 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\telhanorte\index.php(15): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/cadastroDeClientes
+2012/11/20 21:10:17 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY nome DESC' at line 1. A declaração SQL executada foi: SELECT id, nome FROM `cidades` `t` WHERE id_uf= ORDER BY nome DESC.
+2012/11/20 21:10:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY nome DESC' at line 1' in C:\wamp\www\telhanorte\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\telhanorte\protected\controllers\CidadesController.php(180): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): CidadesController->actionGetCities()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\telhanorte\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\telhanorte\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('GetCities')
+#14 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Cidades/GetCiti...')
+#15 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/telhanorte/index.php/Cidades/GetCities
+HTTP_REFERER=http://192.168.0.22/telhanorte/index.php/site/cadastroDeClientes
+---
+2012/11/20 21:11:36 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY nome DESC' at line 1. A declaração SQL executada foi: SELECT id, nome FROM `cidades` `t` WHERE id_uf= ORDER BY nome DESC.
+2012/11/20 21:11:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY nome DESC' at line 1' in C:\wamp\www\telhanorte\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 C:\wamp\www\telhanorte\yii\framework\db\ar\CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\telhanorte\protected\controllers\CidadesController.php(180): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): CidadesController->actionGetCities()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\telhanorte\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\telhanorte\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\telhanorte\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): CController->run('GetCities')
+#14 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Cidades/GetCiti...')
+#15 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\telhanorte\index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/telhanorte/index.php/Cidades/GetCities
+HTTP_REFERER=http://192.168.0.22/telhanorte/index.php/site/cadastroDeClientes
+---

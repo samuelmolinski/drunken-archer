@@ -49,9 +49,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'nome',
 		'email',
 		'cpf',
+		'ddd',
 		'telefone',
-		'cidade',
 		/*
+		'cidade',
 		'estado',
 		'loja',
 		'assunto',

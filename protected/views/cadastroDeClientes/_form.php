@@ -22,9 +22,33 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'enderecoCompleto'); ?>
-		<?php echo $form->textField($model,'enderecoCompleto',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'enderecoCompleto'); ?>
+		<?php echo $form->labelEx($model,'endereco'); ?>
+		<?php echo $form->textField($model,'endereco',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'endereco'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'bairro'); ?>
+		<?php echo $form->textField($model,'bairro',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->error($model,'bairro'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'estado'); ?>
+		<?php echo $form->textField($model,'estado'); ?>
+		<?php echo $form->error($model,'estado'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'cidade'); ?>
+		<?php echo $form->textField($model,'cidade'); ?>
+		<?php echo $form->error($model,'cidade'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'cep'); ?>
+		<?php echo $form->textField($model,'cep'); ?>
+		<?php echo $form->error($model,'cep'); ?>
 	</div>
 
 	<div class="row">
@@ -76,9 +100,21 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'ddd'); ?>
+		<?php echo $form->textField($model,'ddd'); ?>
+		<?php echo $form->error($model,'ddd'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'telefone'); ?>
 		<?php echo $form->textField($model,'telefone'); ?>
 		<?php echo $form->error($model,'telefone'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'dddc'); ?>
+		<?php echo $form->textField($model,'dddc'); ?>
+		<?php echo $form->error($model,'dddc'); ?>
 	</div>
 
 	<div class="row">

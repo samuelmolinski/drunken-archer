@@ -22,8 +22,28 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'enderecoCompleto'); ?>
-		<?php echo $form->textField($model,'enderecoCompleto',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->label($model,'endereco'); ?>
+		<?php echo $form->textField($model,'endereco',array('size'=>50,'maxlength'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'bairro'); ?>
+		<?php echo $form->textField($model,'bairro',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'estado'); ?>
+		<?php echo $form->textField($model,'estado'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'cidade'); ?>
+		<?php echo $form->textField($model,'cidade'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'cep'); ?>
+		<?php echo $form->textField($model,'cep'); ?>
 	</div>
 
 	<div class="row">
@@ -67,8 +87,18 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'ddd'); ?>
+		<?php echo $form->textField($model,'ddd'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'telefone'); ?>
 		<?php echo $form->textField($model,'telefone'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'dddc'); ?>
+		<?php echo $form->textField($model,'dddc'); ?>
 	</div>
 
 	<div class="row">

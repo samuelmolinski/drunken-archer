@@ -13,10 +13,27 @@
 	<?php echo CHtml::encode($data->nomeCompleto); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('enderecoCompleto')); ?>:</b>
-	<?php echo CHtml::encode($data->enderecoCompleto); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('endereco')); ?>:</b>
+	<?php echo CHtml::encode($data->endereco); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('bairro')); ?>:</b>
+	<?php echo CHtml::encode($data->bairro); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
+	<?php echo CHtml::encode($data->estado); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('cidade')); ?>:</b>
+	<?php echo CHtml::encode($data->cidade); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('cep')); ?>:</b>
+	<?php echo CHtml::encode($data->cep); ?>
+	<br />
+
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
@@ -33,7 +50,6 @@
 	<?php echo CHtml::encode($data->sexo); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('escolaridade')); ?>:</b>
 	<?php echo CHtml::encode($data->escolaridade); ?>
 	<br />
@@ -50,8 +66,16 @@
 	<?php echo CHtml::encode($data->documentoDeIdentidade); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('ddd')); ?>:</b>
+	<?php echo CHtml::encode($data->ddd); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('telefone')); ?>:</b>
 	<?php echo CHtml::encode($data->telefone); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dddc')); ?>:</b>
+	<?php echo CHtml::encode($data->dddc); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('celular')); ?>:</b>

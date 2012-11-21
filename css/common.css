@@ -1,1821 +1,348 @@
-/*
-* @author Marcelo Anderson
-* @date 2012-07-23
-*/
-hr {
-  display: none;
-}
-.radius2 {
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-.faixa {
-  background: #f2f2f2;
-  height: 7px;
-  margin: 0 1px;
-}
-.pgTitle {
-  border-bottom: 3px solid #facccc;
-  margin-bottom: 10px;
-}
-.pgTitle h2 {
-  border-top: 1px solid #f7b2b2;
-  color: #003a89;
-  font-size: 20px;
-  float: left;
-  height: 44px;
-  line-height: 44px;
-  padding: 0 24px;
-}
-div#ajaxBusy,
-.loading {
-  background-color: #FFF6BF;
-  margin: 0 auto;
-  position: fixed;
-  z-index: 999999;
-  top: 0;
-  left: 0;
-  border-radius: 0 0 5px 0;
-  width: 100px;
-  height: 28px;
-  border-width: 0 2px 2px 0;
-  border-color: #FFD324;
-  border-style: solid;
-  padding-right: 20px;
-}
-div#ajaxBusy p,
-.loading p {
-  background: url(http://www.telhanorte.com.br/arquivos/ajax-loader2.gif) no-repeat right center;
-  color: #333;
-  display: block;
-  padding: 6px;
-  text-align: center;
-}
-.nv2_messageError,
-.nv2_messageSuccess {
-  display: none;
-}
-.boxPopUp2-content .nv2_messageError,
-.boxPopUp2-content .nv2_messageSuccess {
-  color: #666;
-  display: block;
-  font-size: 12px;
-  line-height: 18px;
-}
-.boxPopUp2-content .nv2_messageError > div,
-.boxPopUp2-content .nv2_messageSuccess > div {
-  padding: 15px;
-}
-.shareBox {
-  left: -70px;
-  position: absolute;
-  top: 29px;
-  z-index: 20;
-}
-.shareBoxAddthis {
-  padding: 0;
-  position: relative;
-}
-/* Ocultos */
-.history {
-  display: none;
-}
-input[type=text],
-select {
-  background: url(http://www.telhanorte.com.br/arquivos/bgInputText.png) repeat-x left top #ffffff;
-  height: 26px;
-  line-height: 26px;
-}
-textarea {
-  background: url(http://www.telhanorte.com.br/arquivos/bgInputText.png) repeat-x left top #ffffff;
-  height: 96px;
-}
-input[type=text],
-select,
-textarea {
-  border: 1px solid #d7d6d7;
-  color: #666;
-  font-size: 12px;
-  padding: 0 5px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-select {
-  height: 28px;
-  padding: 3px 3px 3px 5px;
-}
-/* Content
----------------------------------------- */
-#container {
-  padding-top: 172px;
-  padding-bottom: 475px;
-}
-.mainTpl {
-  margin: 0 auto;
-  position: relative;
-  width: 1000px;
-}
-.middleContainer,
-.mainContentWrapper {
-  margin: 0 auto;
-  width: 980px;
-}
-.mainContentWrapper {
-  padding-top: 172px;
-  padding-bottom: 475px;
-}
-#columnLeft {
-  float: left;
-  margin: 0 0 0 10px;
-  width: 230px;
-}
-#columnMain {
-  float: left;
-  margin: 0 0 0 10px;
-  width: 750px;
-}
-/* Header
----------------------------------------- */
-#headerTpl {
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
-.headerTplWrapper {
-  height: 164px;
-  margin: 0 auto 8px;
-  position: relative;
-  width: 980px;
-}
-#headerTpl h1,
-.header-steps h1 {
-  float: left;
-  margin: 34px 0 0;
-  width: 252px;
-}
-#headerTpl h1 a,
-.header-steps h1 a {
-  background: url(http://www.telhanorte.com.br/arquivos/logoTelhaNorte.gif) no-repeat 0 0;
-  display: block;
-  height: 40px;
-  margin: 0;
-  text-indent: -9999em;
-  width: 252px;
-}
-.headerContent {
-  float: right;
-  width: 700px;
-}
-.topBar {
-  background: #e40000;
-  border: 1px solid #ebebeb;
-  border-top: none;
-  float: right;
-  margin-bottom: 12px;
-  -webkit-border-bottom-right-radius: 2px;
-  -webkit-border-bottom-left-radius: 2px;
-  -moz-border-radius-bottomright: 2px;
-  -moz-border-radius-bottomleft: 2px;
-  border-bottom-right-radius: 2px;
-  border-bottom-left-radius: 2px;
-}
-.navTop li {
-  color: #FFF;
-  display: block;
-  float: left;
-  font-size: 11px;
-  height: 21px;
-  line-height: 21px;
-  padding: 0 12px;
-}
-.navTop li a {
-  color: #FFF;
-  text-decoration: none;
-}
-.navTop li a:hover {
-  color: #eabf3b;
-}
-/* Mensagem de Boas Vindas */
-/*para pag. de sistema*/.header .welcome {
-  display: none;
-}
-.header .loginmsg {
-  display: none;
-}
-.userText {
-  color: #666;
-  float: right;
-  font-size: 12px;
-}
-.userText em {
-  font-style: normal;
-}
-.userText strong {
-  font-weight: normal;
-}
-.userText a {
-  color: #673e86;
-}
-.userText .welcome {
-  display: inline-block;
-  *display: inline;
-}
-.userText .loginmsg {
-  display: inline-block;
-  *display: inline;
-  padding-left: 4px;
-}
-.userText .loginmsg a {
-  padding-left: 4px;
-}
-.userText .loginmsg em {
-  display: none;
-}
-/*Ol? USU?RIO*/
-/* headerBanners */
-.headerBanners {
-  float: right;
-  margin-bottom: 10px;
-  width: 400px;
-}
-.headerBanners ul {
-  float: right;
-}
-.headerBanners li {
-  float: left;
-  margin-left: 15px;
-}
-/* Busca no header */
-.searchWrapper legend,
-.searchWrapper label,
-.searchWrapper select {
-  display: none;
-}
-/* elementos quase sempre ocultos */
-.searchWrapper {
-  background: #003a89;
-  float: left;
-  height: 26px;
-  padding: 4px;
-  width: 412px;
-  z-index: 20;
-}
-.searchWrapper .fulltext-search-box,
-.searchWrapper .fitext {
-  background: url(http://www.telhanorte.com.br/arquivos/bgSearchText.png) no-repeat 0 0;
-  border: none;
-  color: #666;
-  font-size: 12px;
-  font-weight: bold;
-  float: left;
-  height: 26px;
-  line-height: 26px;
-  margin-right: 15px;
-  padding: 0 10px 0 30px;
-  width: 295px;
-}
-.searchWrapper .btn-buscar,
-.searchWrapper .fibutton {
-  background: none;
-  border: none;
-  color: #f4f4f4;
-  display: block;
-  font-size: 16px;
-  float: left;
-  margin: 0;
-  *margin: -3px 0 0;
-  padding: 0;
-}
-/*carrinho*/
-.cartInfo {
-  background: url(http://www.telhanorte.com.br/arquivos/icoCart.gif) no-repeat 8px center #e40000;
-  float: right;
-  height: 34px;
-  padding: 0 0 0 44px;
-  overflow: hidden;
-  width: 208px;
-}
-.cartInfo a {
-  *cursor: pointer;
-  display: block;
-  height: 34px;
-  text-decoration: none;
-}
-.amount-products,
-.amount-kits,
-.total-cart {
-  display: none;
-}
-/*elementos ocultos*/
-.cartInfoWrapper .title {
-  color: #FFF;
-  display: block;
-  float: left;
-  font-size: 12px;
-  line-height: 34px;
-  margin-right: 5px;
-  text-align: left;
-}
-.cart-info {
-  float: left;
-  line-height: 34px;
-  width: 108px;
-}
-.cart-info li {
-  color: #FFF;
-  font-size: 11px;
-  float: left;
-  text-align: left;
-}
-.cart-info li em {
-  font-style: normal;
-}
-.cart-info li.amount-items {
-  display: inline-block;
-  font-size: 12px;
-  margin-right: 5px;
-}
-.cart-info li.total-cart {
-  display: inline-block;
-}
-.cart-info li.amount-items strong,
-.cart-info li.total-cart strong {
-  display: none;
-}
-/*.cart-info li.amount-items .amount-items-em {display:inline-block; padding-right:4px;}*/
-.cartInfo a:hover li,
-.cartInfo a:hover .cartInfoWrapper .title {
-  color: #eabf3b;
-}
-#divCarrinhoResumo {
-  line-height: 34px;
-}
-#divCarrinhoResumo a {
-  color: #FFF;
-}
-#divCarrinhoResumo a:hover {
-  color: #eabf3b;
-}
-/* Menu Com Dropdown*/
-.navTopDepartament {
-  bottom: 0;
-  clear: both;
-  left: 0;
-  position: absolute;
-  width: 980px;
-  z-index: 101;
-}
-.navTopDepartament > ul {
-  background: #e40000;
-  border-bottom: 1px solid #FFF;
-  height: 48px;
-}
-.navTopDepartament > ul > li {
-  float: left;
-  line-height: normal;
-  position: relative;
-}
-.navTopDepartament > ul > li > a {
-  color: #FFF;
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  height: 41px;
-  margin-top: 1px;
-  padding: 6px 22px 0 21px;
-  text-decoration: none;
-}
-.navTopDepartament > ul > li > a.inline {
-  line-height: 35px;
-}
-.navTopDepartament > ul > li:hover > a {
-  background: #eabf3b;
-  color: #e40000;
-}
-.navTopDepartament > ul > li.buttonDepto {
-  background: #003a89;
-  display: block;
-  float: right;
-  padding: 0 10px;
-  position: relative;
-}
-.navTopDepartament > ul > li.buttonDepto > a {
-  background: url(http://www.telhanorte.com.br/arquivos/arrowDepto.png) no-repeat right center transparent;
-  display: block;
-  padding: 6px 12px 0 0;
-}
-.navTopDepartament > ul > li.buttonDepto:hover > a {
-  background-color: transparent;
-  color: #FFF;
-}
-.navTopDepartament .subMenu {
-  background: #FFF;
-  border: 4px solid #eabf3b;
-  clear: both;
-  display: none;
-  left: 0;
-  float: left;
-  padding: 10px 10px 10px 20px;
-  position: absolute;
-  top: 49px;
-  width: 626px;
-  z-index: 105;
-}
-.navTopDepartament .subMenu.right {
-  left: auto;
-  right: 0;
-}
-.navTopDepartament .subMenu > ul {
-  background: url(http://www.telhanorte.com.br/arquivos/bgUlSubMenu.gif) repeat-y left top;
-  clear: left;
-  float: left;
-  width: 376px;
-}
-.navTopDepartament .subMenu > ul li {
-  color: #727272;
-  display: block;
-  font-size: 13px;
-  float: left;
-  line-height: 16px;
-  margin-right: 20px;
-  padding: 4px 4px 4px 0;
-  width: 164px;
-}
-.navTopDepartament .subMenu > h3 {
-  color: #e40000;
-  float: left;
-  font-size: 15px;
-  font-weight: normal;
-  padding: 10px 0;
-  width: 376px;
-}
-.navTopDepartament .subMenu > ul li a {
-  color: #727272;
-}
-.navTopDepartament .buttonDepto .subMenu {
-  border-color: #003a89;
-  left: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  right: 0;
-  width: 952px;
-}
-.navTopDepartament .buttonDepto .subMenu > ul:before,
-.navTopDepartament .buttonDepto .subMenu > ul:after {
-  content: "";
-  display: table;
-}
-.navTopDepartament .buttonDepto .subMenu > ul:after {
-  clear: both;
-}
-.navTopDepartament .buttonDepto .subMenu > ul {
-  *zoom: 1;
-}
-.navTopDepartament .buttonDepto .subMenu > ul {
-  background: none !important;
-  clear: none;
-  float: none;
-  width: 952px;
-}
-.navTopDepartament .buttonDepto .subMenu > ul li {
-  margin: 0 10px;
-  padding: 4px 0;
-  width: 218px;
-}
-.navTopDepartament > ul > li:hover .subMenu {
-  display: block;
-}
-.navTopDepartament .vtexsm-product {
-  float: right;
-  width: 250px;
-}
-/* TABS */
-.tabs-nav {
-  border-bottom: 3px solid #facccc;
-  margin: 0 auto 20px;
-  padding: 0;
-  position: relative;
-  width: 980px;
-}
-.tabs-nav li {
-  border-top: 1px solid #c4c4c4;
-  cursor: pointer;
-  color: #8a8a8a;
-  display: block;
-  font-size: 20px;
-  font-weight: bold;
-  float: left;
-  line-height: 1;
-  margin-right: 10px;
-  padding: 16px 0 12px 0;
-  text-align: center;
-  width: 208px;
-}
-.tabs-nav li:hover,
-.tabs-nav li.active-tab {
-  border-color: #f7b2b2;
-  cursor: pointer;
-}
-.tabs-nav li.active-tab {
-  border-color: #f7b2b2;
-  cursor: default;
-  color: #e40000;
-}
-.tab-content {
-  display: none;
-  clear: both;
-  height: auto;
-  margin: 0 auto;
-  position: relative;
-  width: 980px;
-}
-.active-content {
-  display: block;
-}
-.colecoesHome .tab-content {
-  width: 1000px;
-}
-.produto .tab-content {
-  border: 1px solid #ebebeb;
-  color: #666;
-  line-height: 20px;
-  margin-bottom: 40px;
-  min-height: 60px;
-  padding: 15px;
-  width: auto;
-}
-.produto .tabs-nav li {
-  font-size: 26px;
-  font-weight: normal;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 10px;
-  width: auto;
-}
-/* Tag Cloud */
-.buscas-dia p {
-  display: block;
-  margin: 20px;
-  text-align: center;
-}
-.buscas-dia a {
-  text-decoration: none;
-  padding: 0 5px;
-  color: #B0ADAA;
-}
-.buscas-dia a:hover {
-  background: #DBE9AA;
-  color: #4A9368;
-}
-.busca12 {
-  font-size: 8px;
-}
-.busca13 {
-  font-size: 10px;
-}
-.busca14 {
-  font-size: 12px;
-}
-.busca15 {
-  font-size: 15px;
-}
-.busca16 {
-  font-size: 16px;
-}
-.busca17 {
-  font-size: 18px;
-}
-.busca18 {
-  font-size: 20px;
-}
-.busca19 {
-  font-size: 24px;
-}
-.busca20 {
-  font-size: 26px;
-}
-/* Box Pop up */
-.boxPopUp2,
-.boxPopUp2-overlay {
-  display: none;
-}
-.boxPopUp2 {
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  text-align: center;
-  z-index: 999999;
-  left: 0;
-}
-.boxPopUp2-overlay {
-  background: #000;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  z-index: 999998;
-  cursor: pointer;
-}
-.boxPopUp2-wrap {
-  width: 370px;
-  margin: 0 auto;
-  text-align: left;
-  position: relative;
-}
-.boxPopUp2-content {
-  padding: 0;
-  position: relative;
-  min-height: 50px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #FFF;
-}
-.boxPopUp2-content iframe {
-  width: 100%;
-  min-height: 185px;
-}
-.boxPopUp2-close {
-  background: url(http://www.telhanorte.com.br/arquivos/btFecharPopup.gif) no-repeat 0 0;
-  cursor: pointer;
-  display: block;
-  height: 28px;
-  position: absolute;
-  right: 10px;
-  top: 9px;
-  width: 28px;
-  z-index: 5;
-}
-.boxPopUp2-content h2 {
-  border-bottom: 3px solid #facccc;
-  color: #e40000;
-  font-size: 26px;
-  font-weight: normal;
-  line-height: normal;
-  padding: 8px 0 2px 12px;
-  width: 358px;
-}
-/*popup quickView*/
-.quickViewMain .boxPopUp2-wrap {
-  width: 807px;
-}
-.quickViewMain .boxPopUp2-content {
-  min-height: 400px;
-}
-.quickViewMain .boxPopUp2-content iframe {
-  min-height: 500px;
-}
-.quickViewMain .boxPopUp2-close {
-  right: 20px;
-}
-/* Bread Crumb */
-/* breadcrumb */
-.bread-crumb {
-  padding: 2px 0 12px 18px;
-}
-.bread-crumb ul {
-  line-height: 14px;
-  overflow: hidden;
-}
-.bread-crumb li {
-  background: url(http://www.telhanorte.com.br/arquivos/separator-breadCrumb.gif) no-repeat left 4px;
-  color: #8a8a8a;
-  display: block;
-  float: left;
-  font-size: 11px;
-  margin-left: 4px;
-  padding-left: 10px;
-}
-.bread-crumb a {
-  color: #8a8a8a;
-}
-.bread-crumb li:first-child {
-  background: none;
-  margin: 0;
-  padding: 0;
-}
-.bread-crumb .last strong {
-  font-weight: normal;
-}
-/* Banners */
-.centerBanner {
-  margin: 0 auto 8px;
-  width: 980px;
-}
-.centerBanner img {
-  max-width: 980px;
-}
-.fullBanner {
-  *zoom: 0;
-}
-.fullBanner > div {
-  margin: 0 auto;
-  padding-bottom: 10px;
-  width: 980px;
-}
-.fullBanner img {
-  border: 1px solid #ebebeb;
-  display: inline-block;
-  margin-left: -1px;
-  max-width: 980px;
-}
-.disclaimer {
-  margin: 0 auto 6px;
-  position: relative;
-}
-.disclaimerContent {
-  height: 355px;
-  overflow: hidden;
-  text-align: center;
-  width: 980px;
-}
-.disclaimerContent .box-banner img {
-  max-width: 980px;
-}
-.disclaimer .pagerWrapper {
-  background: url(http://www.telhanorte.com.br/arquivos/bgPagerWrapper.gif) no-repeat 0 0;
-  height: 30px;
-  overflow: hidden;
-  width: 700px;
-}
-.disclaimer .pagerWrapper #pager {
-  float: right;
-  padding-right: 8px;
-  text-align: right;
-  width: 102px;
-}
-.disclaimer .pagerWrapper #pager a {
-  color: #999;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 30px;
-  margin-right: 12px;
-  text-decoration: none;
-}
-.disclaimer .pagerWrapper #pager a.activeSlide,
-.disclaimer .pagerWrapper #pager a:hover {
-  color: #5d307e;
-}
-.halfBannerTop > .box-banner {
-  float: left;
-  margin-left: 10px;
-  padding-bottom: 50px;
-  width: 485px;
-}
-.halfBannerTop > .box-banner:first-child {
-  margin: 0;
-}
-.halfBannerTop > .box-banner img {
-  max-width: 485px;
-}
-.halfBanner .box-banner {
-  float: left;
-  margin-left: 10px;
-  padding-bottom: 30px;
-  width: 485px;
-}
-.halfBanner .box-banner:first-child {
-  margin: 0;
-}
-.halfBanner .box-banner img {
-  max-width: 485px;
-}
-#newsletterV2Promo {
-  /*background:url(http://www.telhanorte.com.br/arquivos/halfBannerNewsPromo.jpg) no-repeat 0 0;*/
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  height: 54px;
-  width: 485px;
-}
-#newsletterV2Promo .box-banner {
-  display: none;
-}
-#newsletterV2Promo fieldset {
-  padding: 12px 0 0 292px;
-}
-#newsletterV2Promo input.newsletter-client-name,
-#newsletterV2Promo input.newsletter-client-email {
-  background: url(http://www.telhanorte.com.br/arquivos/bgVtexNewsEmail.png) no-repeat 0 0;
-  border: none;
-  color: #666;
-  font-size: 12px;
-  float: left;
-  height: 29px;
-  line-height: 28px;
-  margin-right: 4px;
-  padding: 0 10px 0 15px;
-  width: 127px;
-}
-#newsletterV2Promo input.newsletter-client-name {
-  display: none;
-}
-#newsletterV2Promo input.newsletter-button-ok {
-  background: none;
-  border: none;
-  color: #e40000;
-  display: block;
-  float: left;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 1px 0 0;
-  *margin: -3px 0 0;
-  padding: 0;
-  text-transform: uppercase;
-}
-#newsletterV2Promo input.newsletter-button-back {
-  visibility: hidden;
-}
-#newsletterV2Promo .error,
-#newsletterV2 .success {
-  font-size: 11px;
-  padding-top: 5px;
-}
-#newsletterV2Promo .error {
-  color: #e40000;
-}
-#newsletterV2Promo .success {
-  color: #327b36;
-}
-/* MENU-DEPARTAMENTO */
-#columnLeft .menu-departamento {
-  border: 1px solid #ebebeb;
-  padding: 10px 8px;
-  width: 212px;
-}
-#columnLeft .menu-departamento h3 span,
-#columnLeft .menu-departamento h4 span {
-  display: none;
-}
-#columnLeft .menu-departamento h3 {
-  background: #e40000;
-  color: #FFF;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 18px;
-  margin: 0 0 5px;
-  position: relative;
-}
-#columnLeft .menu-departamento h3:hover {
-  background: #eabf3b;
-  color: #e40000;
-}
-#columnLeft .menu-departamento h3 a {
-  color: #FFF;
-  display: block;
-  padding: 10px 14px;
-  text-decoration: none;
-}
-#columnLeft .menu-departamento h3:hover a {
-  color: #e40000;
-}
-#columnLeft .menu-departamento h4 {
-  background: #f2f2f2;
-  color: #003a89;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 18px;
-  margin: 0 0 5px;
-  position: relative;
-}
-#columnLeft .menu-departamento h4 a {
-  color: #003a89;
-  display: block;
-  padding: 10px 14px;
-}
-#columnLeft .menu-departamento h5 {
-  background: #f2f2f2;
-  color: #003a89;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 18px;
-  margin: 0 0 5px;
-  padding: 10px 14px;
-  position: relative;
-}
-#columnLeft .menu-departamento ul {
-  line-height: 18px;
-  margin: 0;
-}
-#columnLeft .menu-departamento li {
-  color: #666;
-  display: block;
-  font-size: 12px;
-  padding: 5px 14px;
-}
-#columnLeft .menu-departamento li.last {
-  padding-bottom: 20px;
-}
-#columnLeft .menu-departamento li a {
-  color: #666;
-}
-/*.menu-departamento li.verMais{background-image:none; border-top:none; padding:0; text-align:right;}
-.menu-departamento li.verMais a{border-top:1px solid #FFF; color:#747474; display:block; font-size:13px; font-family:"Franklin Gothic Book", Tahoma, Arial; padding:8px 10px 8px 10px; text-align:right;}*/
-#columnLeft .menu-departamento fieldset label {
-  color: #666;
-  cursor: default;
-  display: block;
-  font-size: 12px;
-  line-height: 18px;
-  overflow: hidden;
-  padding: 5px 14px;
-  *padding-top: 2px;
-  *padding-bottom: 2px;
-}
-#columnLeft .menu-departamento fieldset input {
-  cursor: default;
-  float: left;
-  *float: none;
-  display: inline-block;
-  margin-right: 10px;
-  *margin-right: 7px;
-  margin-top: 2px;
-  *margin-top: 0;
-  outline: none;
-  *vertical-align: middle !important;
-}
-#columnLeft .menu-departamento fieldset h5 {
-  cursor: inherit;
-}
-#columnLeft .menu-departamento fieldset div {
-  margin: 0 0 15px;
-}
-#columnLeft .menu-departamento .ver-filtros {
-  color: #e40000;
-  display: block;
-  *float: left;
-  font-size: 12px;
-  line-height: 18px;
-  padding: 5px 0 5px 14px;
-  text-decoration: underline;
-}
-#columnLeft .menu-departamento .ver-filtros:hover {
-  text-decoration: none;
-}
-#columnLeft .search-multiple-navigator {
-  position: relative;
-  padding: 0 0 38px;
-}
-#columnLeft .menu-departamento .bt-refinar {
-  background: url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat -105px -73px;
-  bottom: 0;
-  display: block;
-  height: 32px;
-  left: 0;
-  position: absolute;
-  text-indent: -9999em;
-  width: 179px;
-}
-#columnLeft .menu-navegue {
-  background: #e40000;
-  margin: 0 0 10px;
-  overflow: hidden;
-  padding: 1px 0 0;
-  position: relative;
-}
-#columnLeft .menu-navegue .search-navigator-tab {
-  color: #FFF;
-  display: block;
-  float: left;
-  font-weight: bold;
-  font-size: 14px;
-  height: 39px;
-  line-height: 39px;
-  padding: 0 0 0 20px;
-  text-decoration: none;
-  text-align: left;
-  width: 85px;
-}
-#columnLeft .menu-navegue .search-navigator-tab:hover {
-  background: #eabf3b;
-  color: #e40000;
-}
-#columnLeft .menu-navegue .tab-navegue-ativo,
-.menu-navegue .tab-refinar-ativo {
-  background: #eabf3b;
-  color: #e40000;
-  margin-right: 1px;
-  margin-left: 1px;
-}
-#columnLeft .menu-navegue .tab-refinar,
-#columnLeft .menu-navegue .tab-refinar-ativo {
-  height: 36px;
-  line-height: 16px;
-  padding-top: 3px;
-}
-/*.menu-navegue a:first-child {margin-right:1px;}*/
-/* MENU-DEPARTAMENTO */
-/* navCarouselDepartament */
-.navCarouselDepartament {
-  display: none;
-  margin-bottom: 20px;
-}
-.navCarouselDepartament .menu-departamento {
-  border: 1px solid #ebebeb;
-  padding: 20px 15px;
-}
-.navCarouselDepartament .menu2Ul {
-  margin: 0 auto;
-  width: 920px;
-}
-.navCarouselDepartament .menu2Ul > li {
-  display: block;
-  float: left;
-  margin: 0 10px;
-  padding-top: 110px;
-  position: relative;
-  width: 164px;
-}
-.navCarouselDepartament .menu2Ul h3 {
-  color: #e40000;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: normal;
-  padding: 0 8px 5px;
-}
-.navCarouselDepartament .menu2Ul h3 a {
-  color: #e40000;
-}
-.navCarouselDepartament .menu2Ul .menuHorizOverflow3 {
-  display: none;
-}
-.navCarouselDepartament .menu2UlWrap li {
-  display: block;
-}
-.navCarouselDepartament .menu2UlWrap li a {
-  color: #555;
-  display: block;
-  font-size: 12px;
-  line-height: 16px;
-  padding: 3px 8px;
-  text-decoration: none;
-}
-.navCarouselDepartament .menu2UlWrap li a:hover {
-  background: #e4e3e4;
-}
-.navCarouselDepartament .vtexsm-productDepartament {
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 164px;
-}
-.navCarouselDepartament .vtexsm-productDepartament .productImageWrapper {
-  padding-left: 8px;
-  /*text-align:center;*/
-}
-.navCarouselDepartament .menu2UlWrap li.hide {
-  display: none;
-}
-.navCarouselDepartament .menu_show_all,
-.navCarouselDepartament .menu_hidden_all {
-  cursor: pointer;
-  padding: 5px 8px;
-}
-.navCarouselDepartament .menu_show_all:hover,
-.navCarouselDepartament .menu_hidden_all:hover {
-  text-decoration: underline;
-}
-/* jQuery UI - Search */
-.ui-autocomplete {
-  background-color: #FFF;
-  border: 1px solid #ebebeb;
-  padding: 5px;
-  text-align: left;
-  width: 324px !important;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-.ui-autocomplete a {
-  color: #666;
-  cursor: pointer;
-  display: block;
-  font-size: 12px;
-}
-.ui-state-hover {
-  color: #e40000;
-}
-.ui-autocomplete img {
-  vertical-align: middle;
-}
-.ui-menu-item {
-  border-top: 1px solid #ebebeb;
-  margin-top: 5px;
-  padding-top: 5px;
-}
-.ui-menu-item:first-child {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-/* carousel marcas */
-.carouselMarcas,
-.faixaMarcas {
-  display: none;
-}
-.carouselMarcas {
-  border: 1px solid #ebebeb;
-  margin: 0 auto 24px;
-  width: 978px;
-}
-.carouselMarcas ul {
-  height: 88px;
-  margin: 0 auto;
-  overflow: hidden;
-  width: 900px;
-}
-.carouselMarcas li {
-  display: block;
-  float: left;
-  height: 48px;
-  margin: 20px 10px;
-  overflow: hidden;
-  text-align: center;
-  width: 130px;
-}
-.carouselMarcas li img {
-  max-width: 130px;
-}
-/* Prateleira/default | N?O MUDAR ESTES PADR?ES */
-.prateleira ul:before,
-.prateleira ul:after {
-  content: "";
-  display: table;
-}
-.prateleira ul:after {
-  clear: both;
-}
-.prateleira ul {
-  zoom: 1;
-}
-.prateleira ul {
-  padding: 0 0 15px;
-}
-.prateleira li {
-  background: url(http://www.telhanorte.com.br/arquivos/bgPrateleira.png) no-repeat center top;
-  display: block;
-  float: left;
-  height: 418px;
-  position: relative;
-  width: 250px;
-}
-.prateleira .productImageWrapper {
-  height: 180px;
-  margin: 0 auto;
-  padding: 26px 0 6px;
-  text-align: center;
-  width: 180px;
-}
-.prateleira a.productImage img {
-  display: inline-block;
-}
-.prateleira .data {
-  padding: 0 30px 0 30px;
-}
-.prateleira .percent {
-  background: #e40000;
-  color: #FFF;
-  font-size: 12px;
-  height: 19px;
-  line-height: 19px;
-  margin-bottom: 6px;
-  text-align: center;
-  visibility: hidden;
-  *zoom: 0;
-}
-.prateleira h3 {
-  color: #666;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 16px;
-  height: 60px;
-}
-.prateleira h3 a {
-  color: #666;
-}
-.prateleira .price {
-  clear: both;
-}
-.prateleira .price a {
-  color: #003a89;
-  font-size: 11px;
-  line-height: 16px;
-}
-.prateleira .oldPrice {
-  color: #666;
-  display: block;
-  text-decoration: line-through;
-}
-.prateleira .oldPrice span {
-  /*text-decoration:line-through;*/
-}
-.prateleira .newPrice {
-  color: #003a89;
-  display: block;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: bold;
-}
-.prateleira .newPrice em {
-  color: #e40000;
-  font-style: normal;
-}
-.prateleira .installment {
-  color: #003a89;
-  display: block;
-  font-size: 15px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: normal;
-}
-.prateleira .installment strong {
-  color: #e40000;
-  font-size: 16px;
-}
-.prateleira .price a:hover {
-  *cursor: pointer;
-  text-decoration: underline;
-}
-.prateleira .outOfStock {
-  clear: both;
-  color: #e40000;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: bold;
-  padding: 0;
-}
-.prateleira .listPriceMinus {
-  color: #339933;
-  font-size: 11px;
-  line-height: 16px;
-}
-.prateleira .discountHightLight {
-  *zoom: 0;
-}
-.prateleira .discountHightLight .flag {
-  display: none;
-}
-.prateleira .discountHightLight .lancamentos {
-  background: url(http://www.telhanorte.com.br/arquivos/selo_lancamento.png) no-repeat 0 0;
-  display: block;
-  height: 72px;
-  position: absolute;
-  right: 14px;
-  top: 140px;
-  text-indent: -9999em;
-  width: 72px;
-}
-.prateleira .discountHightLight .exclusivo {
-  background: url(http://www.telhanorte.com.br/arquivos/Exclusivo-Telhanorte.png) no-repeat 0 0;
-  display: block;
-  height: 72px;
-  position: absolute;
-  right: 14px;
-  top: 140px;
-  text-indent: -9999em;
-  width: 72px;
-}
-.prateleira .quickView a {
-  background: url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat 0 -73px;
-  bottom: 32px;
-  display: block;
-  height: 32px;
-  left: 30px;
-  position: absolute;
-  text-indent: -9999em;
-  width: 96px;
-}
-.prateleira .bottomBuy a {
-  background: url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat -336px 0px;
-  bottom: 32px;
-  display: block;
-  height: 29px;
-  left: 30px;
-  position: absolute;
-  text-indent: -9999em;
-  width: 164px;
-}
-.prateleira li:hover {
-  background-position: center bottom;
-}
-.prateleira li:hover .percent {
-  visibility: visible;
-}
-.vitrine {
-  zoom: 0;
-}
-/*
-
-.vitrine ul{border-top:1px solid #cacaca; margin:0 9px; padding:20px 0 20px;}
-.vitrine li{margin:0 10px 0; overflow:hidden; width:175px;}
-.vitrine li.last{margin-right:0;}
-.vitrine li .productImageWrapper {margin:0 auto 14px;}
-.vitrine li a.productImage{display:inline-block; height:150px; width:150px;}
-*/
-/* Prateleira menu */
-.vtexsm-product ul:before,
-.vtexsm-product ul:after {
-  content: "";
-  display: table;
-}
-.vtexsm-product ul:after {
-  clear: both;
-}
-.vtexsm-product ul {
-  zoom: 1;
-}
-.vtexsm-product ul {
-  padding: 0;
-}
-.vtexsm-product li {
-  background: url(http://www.telhanorte.com.br/arquivos/bgPrateleira.png) no-repeat center top;
-  display: block;
-  float: left;
-  height: 418px;
-  position: relative;
-  width: 250px;
-}
-.vtexsm-product .productImageWrapper {
-  height: 180px;
-  margin: 0 auto;
-  padding: 26px 0 6px;
-  text-align: center;
-  width: 180px;
-}
-.vtexsm-product a.productImage img {
-  display: inline-block;
-}
-.vtexsm-product .data {
-  padding: 0 30px 0 30px;
-}
-.vtexsm-product .percent {
-  background: #e40000;
-  color: #FFF;
-  font-size: 12px;
-  height: 19px;
-  line-height: 19px;
-  margin-bottom: 6px;
-  text-align: center;
-  visibility: hidden;
-  *zoom: 0;
-}
-.vtexsm-product h3 {
-  color: #666;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 16px;
-  height: 60px;
-}
-.vtexsm-product h3 a {
-  color: #666;
-}
-.vtexsm-product .price {
-  clear: both;
-}
-.vtexsm-product .price a {
-  color: #003a89;
-  font-size: 11px;
-  line-height: 16px;
-}
-.vtexsm-product .oldPrice {
-  color: #666;
-  display: block;
-  text-decoration: line-through;
-}
-.vtexsm-product .oldPrice span {
-  /*text-decoration:line-through;*/
-}
-.vtexsm-product .newPrice {
-  color: #003a89;
-  display: block;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: bold;
-}
-.vtexsm-product .newPrice em {
-  color: #e40000;
-  font-style: normal;
-}
-.vtexsm-product .installment {
-  color: #003a89;
-  display: block;
-  font-size: 15px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: normal;
-}
-.vtexsm-product .installment strong {
-  color: #e40000;
-  font-size: 16px;
-}
-.vtexsm-product .price a:hover {
-  *cursor: pointer;
-  text-decoration: underline;
-}
-.vtexsm-product .outOfStock {
-  clear: both;
-  color: #e40000;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: bold;
-  padding: 0;
-}
-.vtexsm-product .listPriceMinus {
-  color: #339933;
-  font-size: 11px;
-  line-height: 14;
-}
-.vtexsm-product .quickView a {
-  background: url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat 0 -73px;
-  bottom: 32px;
-  display: block;
-  height: 32px;
-  left: 30px;
-  position: absolute;
-  text-indent: -9999em;
-  width: 96px;
-}
-.vtexsm-product .bottomBuy a {
-  background: url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat -336px 0px;
-  bottom: 32px;
-  display: block;
-  height: 29px;
-  left: 30px;
-  position: absolute;
-  text-indent: -9999em;
-  width: 164px;
-}
-.vtexsm-product li:hover {
-  background-position: center bottom;
-}
-.vtexsm-product li:hover .percent {
-  visibility: visible;
-}
-/* menu sidebar */
-.menu-atendimento {
-  border: 1px solid #ebebeb;
-  margin-bottom: 20px;
-  padding: 10px 8px;
-  /*width:212px;*/
-}
-.menu-atendimento h3 {
-  background: #e40000;
-  color: #FFF;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 37px;
-  margin: 0 0 5px;
-  padding-left: 14px;
-  position: relative;
-}
-.menu-atendimento ul {
-  line-height: 26px;
-  margin: 0;
-  padding: 5px 0;
-}
-.menu-atendimento li {
-  color: #666;
-  display: block;
-  font-size: 14px;
-  padding-left: 14px;
-}
-.menu-atendimento li a {
-  color: #666;
-}
-.rating-produto,
-.rating-demonstrativo,
-.rating-wrapper .rating {
-  background: url(http://www.telhanorte.com.br/arquivos/ratingStar.png) no-repeat;
-  display: block;
-  height: 15px;
-  text-indent: -99999em;
-  width: 94px;
-}
-.avaliacao0 {
-  background-position: 0 0;
-}
-.avaliacao5 {
-  background-position: 0 -16px;
-}
-.avaliacao10 {
-  background-position: 0 -32px;
-}
-.avaliacao15 {
-  background-position: 0 -48px;
-}
-.avaliacao20 {
-  background-position: 0 -64px;
-}
-.avaliacao25 {
-  background-position: 0 -80px;
-}
-.avaliacao30 {
-  background-position: 0 -96px;
-}
-.avaliacao35 {
-  background-position: 0 -112px;
-}
-.avaliacao40 {
-  background-position: 0 -128px;
-}
-.avaliacao45 {
-  background-position: 0 -144px;
-}
-.avaliacao50 {
-  background-position: 0 -160px;
-}
-.a0 {
-  background-position: 0 0 !important;
-}
-.a5 {
-  background-position: 0 -110px !important;
-}
-.a10 {
-  background-position: 0 -110px !important;
-}
-.a15 {
-  background-position: 0 -125px !important;
-}
-.a20 {
-  background-position: 0 -125px !important;
-}
-.a25 {
-  background-position: 0 -140px !important;
-}
-.a30 {
-  background-position: 0 -140px !important;
-}
-.a35 {
-  background-position: 0 -155px !important;
-}
-.a40 {
-  background-position: 0 -155px !important;
-}
-.a45 {
-  background-position: 0 -170px !important;
-}
-.a50 {
-  background-position: 0 -170px !important;
-}
-/* Pagination */
-.pager {
-  text-align: center;
-  margin: 0 auto;
-}
-.pages * {
-  vertical-align: middle;
-}
-/*ie 7*/.pages li {
-  cursor: pointer;
-  color: #666;
-  display: inline-block;
-  *float: left;
-  font-size: 12px;
-}
-.pages .page-number {
-  padding: 0px 5px;
-}
-.pages .pgCurrent {
-  color: #e40000;
-  font-weight: bold;
-}
-.pages .previous,
-.pages .next {
-  margin: 0 5px 0;
-}
-.pages .first,
-.pages .last {
-  background: url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat;
-  height: 9px;
-  margin: 0;
-  *margin: 5px 0 0;
-  text-indent: -99999em;
-  width: 6px;
-}
-.pages .first {
-  background-position: -212px -45px;
-}
-.pages .last {
-  background-position: -220px -45px;
-}
-/* Footer */
-.footerTpl {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-.footerTplWrapper {
-  background: url(http://www.telhanorte.com.br/arquivos/bgFooter.gif) no-repeat 0 0;
-  height: 378px;
-  margin: 0 auto;
-  padding: 30px 0 0;
-  width: 980px;
-}
-.footerLeft {
-  float: left;
-  width: 755px;
-}
-.footerRight {
-  float: right;
-  margin-right: 35px;
-  width: 190px;
-}
-.footerColumns > li {
-  color: #003a89;
-  font-size: 12px;
-  float: left;
-}
-.footerColumns > li.institucional a {
-  color: #003a89;
-  display: block;
-  padding-left: 15px;
-  text-decoration: none;
-}
-.footerColumns > li.institucional a:hover {
-  background: url(http://www.telhanorte.com.br/arquivos/bgLinks.png) repeat 0 0;
-}
-.footerColumns > li li {
-  line-height: 18px;
-}
-.fCol2 {
-  padding: 40px 0 0;
-}
-.footerTpl h4 {
-  border-bottom: 3px solid #f0d276;
-  color: #e40000;
-  font-size: 15px;
-  margin-bottom: 15px;
-  padding: 0 0 12px 14px;
-}
-.footerTpl li.institucional {
-  padding-left: 30px;
-  width: 200px;
-}
-.footerTpl li.TvTelhanorte {
-  padding-left: 40px;
-  width: 200px;
-}
-.footerTpl li.CompraSegura {
-  padding-left: 30px;
-  width: 200px;
-}
-.footerTpl li.sac {
-  padding-left: 40px;
-  width: 200px;
-}
-.footerTpl li.payment {
-  padding-left: 40px;
-  width: 440px;
-}
-.footerTpl li.CompraSegura li {
-  float: left;
-  margin-right: 10px;
-}
-.footerTpl li.sac li {
-  line-height: normal;
-  padding: 0 0 10px 14px;
-}
-.footerTpl li.payment li {
-  float: left;
-  margin: 0 10px 10px 0;
-}
-.footerTpl .stamps {
-  background: url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat;
-  height: 36px;
-  width: 57px;
-}
-.footerTpl .stamps1 {
-  background-position: 0 0;
-}
-.footerTpl .stamps2 {
-  background-position: -59px 0;
-}
-.footerTpl .stamps3 {
-  background-position: -118px 0;
-}
-.footerTpl .stamps4 {
-  background-position: -177px 0;
-}
-.footerTpl .likeBox {
-  background: #FFF;
-  margin-bottom: 10px;
-}
-.footerTpl .follow {
-  width: 190px;
-}
-.footerTpl .follow li {
-  float: left;
-  margin: 0 0 4px 4px;
-  height: 32px;
-  width: 33px;
-}
-.footerTpl .follow li:first-child {
-  margin-left: 0;
-}
-.footerTpl .follow a {
-  background: url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat;
-  display: block;
-  height: 32px;
-  text-indent: -9999em;
-  width: 33px;
-}
-.footerTpl .follow a.twitter {
-  background-position: 0 -38px;
-}
-.footerTpl .follow a.facebook {
-  background-position: -35px -38px;
-}
-.footerTpl .follow a.vimeo {
-  background-position: -70px -38px;
-}
-.footerTpl .follow a.wordpress {
-  background-position: -105px -38px;
-}
-.footerTpl .follow a.rede5 {
-  background-position: -140px -38px;
-}
-/* Copyright */
-.copyrightTpl {
-  height: 47px;
-  margin: 0 auto;
-  width: 980px;
-}
-.copyrightTpl p {
-  color: #8a8a8a;
-  font-size: 11px;
-  line-height: 47px;
-  text-align: center;
-}
-.copyrightTpl p a {
-  color: #8a8a8a;
-}
-.aviso-erro {
-  background: #f2f2f2 url(http://www.telhanorte.com.br/arquivos/icoAlerta.png) no-repeat 16px 10px;
-  border: 1px solid #ebebeb;
-  margin: 0 0 20px;
-  padding: 15px 15px 15px 56px;
-}
-.aviso-erro > p {
-  display: none;
-}
-.carrinho .aviso-erro > p {
-  display: block;
-}
-.aviso-erro ul {
-  list-style: none;
-}
-.aviso-erro ul li {
-  color: #e40000 !important;
-  display: block;
-  font-size: 12px;
-  padding-top: 8px;
-}
-.aviso-erro ul li:first-child {
-  padding: 0;
-}
-input.error {
-  border: 1px solid #e40000 !important;
-}
-/* jQuery Zoom */
-.produto .jqZoomPup {
-  background: #FFF;
-  border: 1px solid #ebebeb;
-  cursor: crosshair;
-  filter: alpha(opacity=60);
-  opacity: 0.6;
-  overflow: hidden;
-  z-index: 10;
-}
-.produto .jqZoomPup img {
-  border: 0 none;
-}
-.produto .preload {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-  border: 1px solid #CCC;
-  background: #ffffff url(http://www.telhanorte.com.br/arquivos/ajax-loader.gif) center center no-repeat;
-  z-index: 110;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.produto .jqZoomWindow {
-  background: #FFF;
-  box-shadow: 0 1px 2px #ebebeb;
-  color: #FFF;
-  display: block !important;
-  border: 1px solid #ebebeb;
-  width: 412px !important;
-  height: 412px !important;
-  margin: -1px 0 0 0px;
-  top: 216px;
-}
+hr{display:none;}
+.radius2{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
+.faixa{background:#f2f2f2;height:7px;margin:0 1px;}
+.pgTitle{border-bottom:3px solid #facccc;margin-bottom:10px;}
+.pgTitle h2{border-top:1px solid #f7b2b2;color:#003a89;font-size:20px;float:left;height:44px;line-height:44px;padding:0 24px;}
+div#ajaxBusy,.loading{background-color:#FFF6BF;margin:0 auto;position:fixed;z-index:999999;top:0;left:0;border-radius:0 0 5px 0;width:100px;height:28px;border-width:0 2px 2px 0;border-color:#FFD324;border-style:solid;padding-right:20px;}
+div#ajaxBusy p,.loading p{background:url(http://www.telhanorte.com.br/arquivos/ajax-loader2.gif) no-repeat right center;color:#333;display:block;padding:6px;text-align:center;}
+.nv2_messageError,.nv2_messageSuccess{display:none;}
+.boxPopUp2-content .nv2_messageError,.boxPopUp2-content .nv2_messageSuccess{color:#666;display:block;font-size:12px;line-height:18px;}
+.boxPopUp2-content .nv2_messageError>div,.boxPopUp2-content .nv2_messageSuccess>div{padding:15px;}
+.shareBox{left:-70px;position:absolute;top:29px;z-index:20;}
+.shareBoxAddthis{padding:0;position:relative;}
+.history{display:none;}
+input[type=text],select{background:url(http://www.telhanorte.com.br/arquivos/bgInputText.png) repeat-x left top #ffffff;height:26px;line-height:26px;}
+textarea{background:url(http://www.telhanorte.com.br/arquivos/bgInputText.png) repeat-x left top #ffffff;height:96px;}
+input[type=text],select,textarea{border:1px solid #d7d6d7;color:#666;font-size:12px;padding:0 5px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+select{height:28px;padding:3px 3px 3px 5px;}
+#container{padding-top:172px;padding-bottom:475px;}
+.mainTpl{margin:0 auto;position:relative;width:1000px;}
+.middleContainer,.mainContentWrapper{margin:0 auto;width:980px;}
+.mainContentWrapper{padding-top:172px;padding-bottom:475px;}
+#columnLeft50{float:left;margin:0 15px 0 5px;width:470px;}
+#columnRight50{float:left;margin:0 5px 0 15px;width:470px;}
+#columnLeft{float:left;margin:0 0 0 10px;width:230px;}
+#columnMain{float:left;margin:0 0 0 10px;width:750px;}
+#headerTpl{left:0;position:absolute;top:0;width:100%;z-index:100;}
+.headerTplWrapper{height:164px;margin:0 auto 8px;position:relative;width:980px;}
+#headerTpl h1,.header-steps h1{float:left;margin:34px 0 0;width:252px;}
+#headerTpl h1 a,.header-steps h1 a{background:url(http://www.telhanorte.com.br/arquivos/logoTelhaNorte.gif) no-repeat 0 0;display:block;height:40px;margin:0;text-indent:-9999em;width:252px;}
+.headerContent{float:right;width:700px;}
+.topBar{background:#e40000;border:1px solid #ebebeb;border-top:none;float:right;margin-bottom:12px;-webkit-border-bottom-right-radius:2px;-webkit-border-bottom-left-radius:2px;-moz-border-radius-bottomright:2px;-moz-border-radius-bottomleft:2px;border-bottom-right-radius:2px;border-bottom-left-radius:2px;}
+.navTop li{color:#FFF;display:block;float:left;font-size:11px;height:21px;line-height:21px;padding:0 12px;}
+.navTop li a{color:#FFF;text-decoration:none;}
+.navTop li a:hover{color:#eabf3b;}
+.header .welcome{display:none;}
+.header .loginmsg{display:none;}
+.userText{color:#666;float:right;font-size:12px;}
+.userText em{font-style:normal;}
+.userText strong{font-weight:normal;}
+.userText a{color:#673e86;}
+.userText .welcome{display:inline-block;*display:inline;}
+.userText .loginmsg{display:inline-block;*display:inline;padding-left:4px;}
+.userText .loginmsg a{padding-left:4px;}
+.userText .loginmsg em{display:none;}
+.headerBanners{float:right;margin-bottom:10px;width:400px;}
+.headerBanners ul{float:right;}
+.headerBanners li{float:left;margin-left:15px;}
+.searchWrapper legend,.searchWrapper label,.searchWrapper select{display:none;}
+.searchWrapper{background:#003a89;float:left;height:26px;padding:4px;width:412px;z-index:20;}
+.searchWrapper .fulltext-search-box,.searchWrapper .fitext{background:url(http://www.telhanorte.com.br/arquivos/bgSearchText.png) no-repeat 0 0;border:none;color:#666;font-size:12px;font-weight:bold;float:left;height:26px;line-height:26px;margin-right:15px;padding:0 10px 0 30px;width:295px;}
+.searchWrapper .btn-buscar,.searchWrapper .fibutton{background:none;border:none;color:#f4f4f4;display:block;font-size:16px;float:left;margin:0;*margin:-3px 0 0;padding:0;}
+.cartInfo{background:url(http://www.telhanorte.com.br/arquivos/icoCart.gif) no-repeat 8px center #e40000;float:right;height:34px;padding:0 0 0 44px;overflow:hidden;width:208px;}
+.cartInfo a{*cursor:pointer;display:block;height:34px;text-decoration:none;}
+.amount-products,.amount-kits,.total-cart{display:none;}
+.cartInfoWrapper .title{color:#FFF;display:block;float:left;font-size:12px;line-height:34px;margin-right:5px;text-align:left;}
+.cart-info{float:left;line-height:34px;width:108px;}
+.cart-info li{color:#FFF;font-size:11px;float:left;text-align:left;}
+.cart-info li em{font-style:normal;}
+.cart-info li.amount-items{display:inline-block;font-size:12px;margin-right:5px;}
+.cart-info li.total-cart{display:inline-block;}
+.cart-info li.amount-items strong,.cart-info li.total-cart strong{display:none;}
+.cartInfo a:hover li,.cartInfo a:hover .cartInfoWrapper .title{color:#eabf3b;}
+#divCarrinhoResumo{line-height:34px;}
+#divCarrinhoResumo a{color:#FFF;}
+#divCarrinhoResumo a:hover{color:#eabf3b;}
+.navTopDepartament{bottom:0;clear:both;left:0;position:absolute;width:980px;z-index:101;}
+.navTopDepartament>ul{background:#e40000;border-bottom:1px solid #FFF;height:48px;}
+.navTopDepartament>ul>li{float:left;line-height:normal;position:relative;}
+.navTopDepartament>ul>li>a{color:#FFF;display:block;font-size:14px;font-weight:bold;height:41px;margin-top:1px;padding:6px 22px 0 21px;text-decoration:none;}
+.navTopDepartament>ul>li>a.inline{line-height:35px;}
+.navTopDepartament>ul>li:hover>a{background:#eabf3b;color:#e40000;}
+.navTopDepartament>ul>li.buttonDepto{background:#003a89;display:block;float:right;padding:0 10px;position:relative;}
+.navTopDepartament>ul>li.buttonDepto>a{background:url(http://www.telhanorte.com.br/arquivos/arrowDepto.png) no-repeat right center transparent;display:block;padding:6px 12px 0 0;}
+.navTopDepartament>ul>li.buttonDepto:hover>a{background-color:transparent;color:#FFF;}
+.navTopDepartament .subMenu{background:#FFF;border:4px solid #eabf3b;clear:both;display:none;left:0;float:left;padding:10px 10px 10px 20px;position:absolute;top:49px;width:626px;z-index:105;}
+.navTopDepartament .subMenu.right{left:auto;right:0;}
+.navTopDepartament .subMenu>ul{background:url(http://www.telhanorte.com.br/arquivos/bgUlSubMenu.gif) repeat-y left top;clear:left;float:left;width:376px;}
+.navTopDepartament .subMenu>ul li{color:#727272;display:block;font-size:13px;float:left;line-height:16px;margin-right:20px;padding:4px 4px 4px 0;width:164px;}
+.navTopDepartament .subMenu>h3{color:#e40000;float:left;font-size:15px;font-weight:normal;padding:10px 0;width:376px;}
+.navTopDepartament .subMenu>ul li a{color:#727272;}
+.navTopDepartament .buttonDepto .subMenu{border-color:#003a89;left:auto;padding-left:10px;padding-right:10px;right:0;width:952px;}
+.navTopDepartament .buttonDepto .subMenu>ul:before,.navTopDepartament .buttonDepto .subMenu>ul:after{content:"";display:table;}
+.navTopDepartament .buttonDepto .subMenu>ul:after{clear:both;}
+.navTopDepartament .buttonDepto .subMenu>ul{*zoom:1;}
+.navTopDepartament .buttonDepto .subMenu>ul{background:none !important;clear:none;float:none;width:952px;}
+.navTopDepartament .buttonDepto .subMenu>ul li{margin:0 10px;padding:4px 0;width:218px;}
+.navTopDepartament>ul>li:hover .subMenu{display:block;}
+.navTopDepartament .vtexsm-product{float:right;width:250px;}
+.tabs-nav{border-bottom:3px solid #facccc;margin:0 auto 20px;padding:0;position:relative;width:980px;}
+.tabs-nav li{border-top:1px solid #c4c4c4;cursor:pointer;color:#8a8a8a;display:block;font-size:20px;font-weight:bold;float:left;line-height:1;margin-right:10px;padding:16px 0 12px 0;text-align:center;width:208px;}
+.tabs-nav li:hover,.tabs-nav li.active-tab{border-color:#f7b2b2;cursor:pointer;}
+.tabs-nav li.active-tab{border-color:#f7b2b2;cursor:default;color:#e40000;}
+.tab-content{display:none;clear:both;height:auto;margin:0 auto;position:relative;width:980px;}
+.active-content{display:block;}
+.colecoesHome .tab-content{width:1000px;}
+.produto .tab-content{border:1px solid #ebebeb;color:#666;line-height:20px;margin-bottom:40px;min-height:60px;padding:15px;width:auto;}
+.produto .tabs-nav li{font-size:26px;font-weight:normal;height:40px;line-height:40px;padding:0 10px;width:auto;}
+.buscas-dia p{display:block;margin:20px;text-align:center;}
+.buscas-dia a{text-decoration:none;padding:0 5px;color:#B0ADAA;}
+.buscas-dia a:hover{background:#DBE9AA;color:#4A9368;}
+.busca12{font-size:8px;}
+.busca13{font-size:10px;}
+.busca14{font-size:12px;}
+.busca15{font-size:15px;}
+.busca16{font-size:16px;}
+.busca17{font-size:18px;}
+.busca18{font-size:20px;}
+.busca19{font-size:24px;}
+.busca20{font-size:26px;}
+.boxPopUp2,.boxPopUp2-overlay{display:none;}
+.boxPopUp2{position:absolute;top:50px;width:100%;text-align:center;z-index:999999;left:0;}
+.boxPopUp2-overlay{background:#000;position:fixed;left:0;top:0;width:100%;height:100%;opacity:0.5;filter:alpha(opacity=50);z-index:999998;cursor:pointer;}
+.boxPopUp2-wrap{width:370px;margin:0 auto;text-align:left;position:relative;}
+.boxPopUp2-content{padding:0;position:relative;min-height:50px;background-repeat:no-repeat;background-position:center center;background-color:#FFF;}
+.boxPopUp2-content iframe{width:100%;min-height:185px;}
+.boxPopUp2-close{background:url(http://www.telhanorte.com.br/arquivos/btFecharPopup.gif) no-repeat 0 0;cursor:pointer;display:block;height:28px;position:absolute;right:10px;top:9px;width:28px;z-index:5;}
+.boxPopUp2-content h2{border-bottom:3px solid #facccc;color:#e40000;font-size:26px;font-weight:normal;line-height:normal;padding:8px 0 2px 12px;width:358px;}
+.quickViewMain .boxPopUp2-wrap{width:807px;}
+.quickViewMain .boxPopUp2-content{min-height:400px;}
+.quickViewMain .boxPopUp2-content iframe{min-height:500px;}
+.quickViewMain .boxPopUp2-close{right:20px;}
+.bread-crumb{padding:2px 0 12px 18px;}
+.bread-crumb ul{line-height:14px;overflow:hidden;}
+.bread-crumb li{background:url(http://www.telhanorte.com.br/arquivos/separator-breadCrumb.gif) no-repeat left 4px;color:#8a8a8a;display:block;float:left;font-size:11px;margin-left:4px;padding-left:10px;}
+.bread-crumb a{color:#8a8a8a;}
+.bread-crumb li:first-child{background:none;margin:0;padding:0;}
+.bread-crumb .last strong{font-weight:normal;}
+.centerBanner{margin:0 auto 8px;width:980px;}
+.centerBanner img{max-width:980px;}
+.fullBanner{*zoom:0;}
+.fullBanner>div{margin:0 auto;padding-bottom:10px;width:980px;}
+.fullBanner img{border:1px solid #ebebeb;display:inline-block;margin-left:-1px;max-width:980px;}
+.disclaimer{margin:0 auto 6px;position:relative;}
+.disclaimerContent{height:355px;overflow:hidden;text-align:center;width:980px;}
+.disclaimerContent .box-banner img{max-width:980px;}
+.disclaimer .pagerWrapper{background:url(http://www.telhanorte.com.br/arquivos/bgPagerWrapper.gif) no-repeat 0 0;height:30px;overflow:hidden;width:700px;}
+.disclaimer .pagerWrapper #pager{float:right;padding-right:8px;text-align:right;width:102px;}
+.disclaimer .pagerWrapper #pager a{color:#999;display:inline-block;font-size:12px;font-weight:bold;line-height:30px;margin-right:12px;text-decoration:none;}
+.disclaimer .pagerWrapper #pager a.activeSlide,.disclaimer .pagerWrapper #pager a:hover{color:#5d307e;}
+.halfBannerTop>.box-banner{float:left;margin-left:10px;padding-bottom:50px;width:485px;}
+.halfBannerTop>.box-banner:first-child{margin:0;}
+.halfBannerTop>.box-banner img{max-width:485px;}
+.halfBanner .box-banner{float:left;margin-left:10px;padding-bottom:30px;width:485px;}
+.halfBanner .box-banner:first-child{margin:0;}
+.halfBanner .box-banner img{max-width:485px;}
+#newsletterV2Promo{background-position:0 0;background-repeat:no-repeat;height:54px;width:485px;}
+#newsletterV2Promo .box-banner{display:none;}
+#newsletterV2Promo fieldset{padding:12px 0 0 292px;}
+#newsletterV2Promo input.newsletter-client-name,#newsletterV2Promo input.newsletter-client-email{background:url(http://www.telhanorte.com.br/arquivos/bgVtexNewsEmail.png) no-repeat 0 0;border:none;color:#666;font-size:12px;float:left;height:29px;line-height:28px;margin-right:4px;padding:0 10px 0 15px;width:127px;}
+#newsletterV2Promo input.newsletter-client-name{display:none;}
+#newsletterV2Promo input.newsletter-button-ok{background:none;border:none;color:#e40000;display:block;float:left;font-size:20px;font-weight:bold;margin:1px 0 0;*margin:-3px 0 0;padding:0;text-transform:uppercase;}
+#newsletterV2Promo input.newsletter-button-back{visibility:hidden;}
+#newsletterV2Promo .error,#newsletterV2 .success{font-size:11px;padding-top:5px;}
+#newsletterV2Promo .error{color:#e40000;}
+#newsletterV2Promo .success{color:#327b36;}
+#columnLeft .menu-departamento{border:1px solid #ebebeb;padding:10px 8px;width:212px;}
+#columnLeft .menu-departamento h3 span,#columnLeft .menu-departamento h4 span{display:none;}
+#columnLeft .menu-departamento h3{background:#e40000;color:#FFF;font-size:16px;font-weight:normal;line-height:18px;margin:0 0 5px;position:relative;}
+#columnLeft .menu-departamento h3:hover{background:#eabf3b;color:#e40000;}
+#columnLeft .menu-departamento h3 a{color:#FFF;display:block;padding:10px 14px;text-decoration:none;}
+#columnLeft .menu-departamento h3:hover a{color:#e40000;}
+#columnLeft .menu-departamento h4{background:#f2f2f2;color:#003a89;font-size:16px;font-weight:normal;line-height:18px;margin:0 0 5px;position:relative;}
+#columnLeft .menu-departamento h4 a{color:#003a89;display:block;padding:10px 14px;}
+#columnLeft .menu-departamento h5{background:#f2f2f2;color:#003a89;font-size:16px;font-weight:normal;line-height:18px;margin:0 0 5px;padding:10px 14px;position:relative;}
+#columnLeft .menu-departamento ul{line-height:18px;margin:0;}
+#columnLeft .menu-departamento li{color:#666;display:block;font-size:12px;padding:5px 14px;}
+#columnLeft .menu-departamento li.last{padding-bottom:20px;}
+#columnLeft .menu-departamento li a{color:#666;}
+#columnLeft .menu-departamento fieldset label{color:#666;cursor:default;display:block;font-size:12px;line-height:18px;overflow:hidden;padding:5px 14px;*padding-top:2px;*padding-bottom:2px;}
+#columnLeft .menu-departamento fieldset input{cursor:default;float:left;*float:none;display:inline-block;margin-right:10px;*margin-right:7px;margin-top:2px;*margin-top:0;outline:none;*vertical-align:middle !important;}
+#columnLeft .menu-departamento fieldset h5{cursor:inherit;}
+#columnLeft .menu-departamento fieldset div{margin:0 0 15px;}
+#columnLeft .menu-departamento .ver-filtros{color:#e40000;display:block;*float:left;font-size:12px;line-height:18px;padding:5px 0 5px 14px;text-decoration:underline;}
+#columnLeft .menu-departamento .ver-filtros:hover{text-decoration:none;}
+#columnLeft .search-multiple-navigator{position:relative;padding:0 0 38px;}
+#columnLeft .menu-departamento .bt-refinar{background:url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat -105px -73px;bottom:0;display:block;height:32px;left:0;position:absolute;text-indent:-9999em;width:179px;}
+#columnLeft .menu-navegue{background:#e40000;margin:0 0 10px;overflow:hidden;padding:1px 0 0;position:relative;}
+#columnLeft .menu-navegue .search-navigator-tab{color:#FFF;display:block;float:left;font-weight:bold;font-size:14px;height:39px;line-height:39px;padding:0 0 0 20px;text-decoration:none;text-align:left;width:85px;}
+#columnLeft .menu-navegue .search-navigator-tab:hover{background:#eabf3b;color:#e40000;}
+#columnLeft .menu-navegue .tab-navegue-ativo,.menu-navegue .tab-refinar-ativo{background:#eabf3b;color:#e40000;margin-right:1px;margin-left:1px;}
+#columnLeft .menu-navegue .tab-refinar,#columnLeft .menu-navegue .tab-refinar-ativo{height:36px;line-height:16px;padding-top:3px;}
+.navCarouselDepartament{display:none;margin-bottom:20px;}
+.navCarouselDepartament .menu-departamento{border:1px solid #ebebeb;padding:20px 15px;}
+.navCarouselDepartament .menu2Ul{margin:0 auto;width:920px;}
+.navCarouselDepartament .menu2Ul>li{display:block;float:left;margin:0 10px;padding-top:110px;position:relative;width:164px;}
+.navCarouselDepartament .menu2Ul h3{color:#e40000;font-size:15px;font-weight:bold;line-height:normal;padding:0 8px 5px;}
+.navCarouselDepartament .menu2Ul h3 a{color:#e40000;}
+.navCarouselDepartament .menu2Ul .menuHorizOverflow3{display:none;}
+.navCarouselDepartament .menu2UlWrap li{display:block;}
+.navCarouselDepartament .menu2UlWrap li a{color:#555;display:block;font-size:12px;line-height:16px;padding:3px 8px;text-decoration:none;}
+.navCarouselDepartament .menu2UlWrap li a:hover{background:#e4e3e4;}
+.navCarouselDepartament .vtexsm-productDepartament{left:0;position:absolute;top:0;width:164px;}
+.navCarouselDepartament .vtexsm-productDepartament .productImageWrapper{padding-left:8px;}
+.navCarouselDepartament .menu2UlWrap li.hide{display:none;}
+.navCarouselDepartament .menu_show_all,.navCarouselDepartament .menu_hidden_all{cursor:pointer;padding:5px 8px;}
+.navCarouselDepartament .menu_show_all:hover,.navCarouselDepartament .menu_hidden_all:hover{text-decoration:underline;}
+.ui-autocomplete{background-color:#FFF;border:1px solid #ebebeb;padding:5px;text-align:left;width:324px !important;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
+.ui-autocomplete a{color:#666;cursor:pointer;display:block;font-size:12px;}
+.ui-state-hover{color:#e40000;}
+.ui-autocomplete img{vertical-align:middle;}
+.ui-menu-item{border-top:1px solid #ebebeb;margin-top:5px;padding-top:5px;}
+.ui-menu-item:first-child{border:none;margin:0;padding:0;}
+.carouselMarcas,.faixaMarcas{display:none;}
+.carouselMarcas{border:1px solid #ebebeb;margin:0 auto 24px;width:978px;}
+.carouselMarcas ul{height:88px;margin:0 auto;overflow:hidden;width:900px;}
+.carouselMarcas li{display:block;float:left;height:48px;margin:20px 10px;overflow:hidden;text-align:center;width:130px;}
+.carouselMarcas li img{max-width:130px;}
+.prateleira ul:before,.prateleira ul:after{content:"";display:table;}
+.prateleira ul:after{clear:both;}
+.prateleira ul{zoom:1;}
+.prateleira ul{padding:0 0 15px;}
+.prateleira li{background:url(http://www.telhanorte.com.br/arquivos/bgPrateleira.png) no-repeat center top;display:block;float:left;height:418px;position:relative;width:250px;}
+.prateleira .productImageWrapper{height:180px;margin:0 auto;padding:26px 0 6px;text-align:center;width:180px;}
+.prateleira a.productImage img{display:inline-block;}
+.prateleira .data{padding:0 30px 0 30px;}
+.prateleira .percent{background:#e40000;color:#FFF;font-size:12px;height:19px;line-height:19px;margin-bottom:6px;text-align:center;visibility:hidden;*zoom:0;}
+.prateleira h3{color:#666;font-size:14px;font-weight:normal;line-height:16px;height:60px;}
+.prateleira h3 a{color:#666;}
+.prateleira .price{clear:both;}
+.prateleira .price a{color:#003a89;font-size:11px;line-height:16px;}
+.prateleira .oldPrice{color:#666;display:block;text-decoration:line-through;}
+.prateleira .oldPrice span{}
+.prateleira .newPrice{color:#003a89;display:block;font-size:15px;line-height:18px;font-weight:bold;}
+.prateleira .newPrice em{color:#e40000;font-style:normal;}
+.prateleira .installment{color:#003a89;display:block;font-size:15px;font-weight:bold;font-style:normal;line-height:normal;}
+.prateleira .installment strong{color:#e40000;font-size:16px;}
+.prateleira .price a:hover{*cursor:pointer;text-decoration:underline;}
+.prateleira .outOfStock{clear:both;color:#e40000;font-size:15px;font-style:normal;font-weight:bold;padding:0;}
+.prateleira .listPriceMinus{color:#339933;font-size:11px;line-height:16px;}
+.prateleira .discountHightLight{*zoom:0;}
+.prateleira .discountHightLight .flag{display:none;}
+.prateleira .discountHightLight .lancamentos{background:url(http://www.telhanorte.com.br/arquivos/selo_lancamento.png) no-repeat 0 0;display:block;height:72px;position:absolute;right:14px;top:140px;text-indent:-9999em;width:72px;}
+.prateleira .discountHightLight .exclusivo{background:url(http://www.telhanorte.com.br/arquivos/Exclusivo-Telhanorte.png) no-repeat 0 0;display:block;height:72px;position:absolute;right:14px;top:140px;text-indent:-9999em;width:72px;}
+.prateleira .quickView a{background:url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat 0 -73px;bottom:32px;display:block;height:32px;left:30px;position:absolute;text-indent:-9999em;width:96px;}
+.prateleira .bottomBuy a{background:url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat -336px 0px;bottom:32px;display:block;height:29px;left:30px;position:absolute;text-indent:-9999em;width:164px;}
+.prateleira li:hover{background-position:center bottom;}
+.prateleira li:hover .percent{visibility:visible;}
+.vitrine{zoom:0;}
+.vtexsm-product ul:before,.vtexsm-product ul:after{content:"";display:table;}
+.vtexsm-product ul:after{clear:both;}
+.vtexsm-product ul{zoom:1;}
+.vtexsm-product ul{padding:0;}
+.vtexsm-product li{background:url(http://www.telhanorte.com.br/arquivos/bgPrateleira.png) no-repeat center top;display:block;float:left;height:418px;position:relative;width:250px;}
+.vtexsm-product .productImageWrapper{height:180px;margin:0 auto;padding:26px 0 6px;text-align:center;width:180px;}
+.vtexsm-product a.productImage img{display:inline-block;}
+.vtexsm-product .data{padding:0 30px 0 30px;}
+.vtexsm-product .percent{background:#e40000;color:#FFF;font-size:12px;height:19px;line-height:19px;margin-bottom:6px;text-align:center;visibility:hidden;*zoom:0;}
+.vtexsm-product h3{color:#666;font-size:14px;font-weight:normal;line-height:16px;height:60px;}
+.vtexsm-product h3 a{color:#666;}
+.vtexsm-product .price{clear:both;}
+.vtexsm-product .price a{color:#003a89;font-size:11px;line-height:16px;}
+.vtexsm-product .oldPrice{color:#666;display:block;text-decoration:line-through;}
+.vtexsm-product .oldPrice span{}
+.vtexsm-product .newPrice{color:#003a89;display:block;font-size:15px;line-height:18px;font-weight:bold;}
+.vtexsm-product .newPrice em{color:#e40000;font-style:normal;}
+.vtexsm-product .installment{color:#003a89;display:block;font-size:15px;font-weight:bold;font-style:normal;line-height:normal;}
+.vtexsm-product .installment strong{color:#e40000;font-size:16px;}
+.vtexsm-product .price a:hover{*cursor:pointer;text-decoration:underline;}
+.vtexsm-product .outOfStock{clear:both;color:#e40000;font-size:15px;font-style:normal;font-weight:bold;padding:0;}
+.vtexsm-product .listPriceMinus{color:#339933;font-size:11px;line-height:14;}
+.vtexsm-product .quickView a{background:url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat 0 -73px;bottom:32px;display:block;height:32px;left:30px;position:absolute;text-indent:-9999em;width:96px;}
+.vtexsm-product .bottomBuy a{background:url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat -336px 0px;bottom:32px;display:block;height:29px;left:30px;position:absolute;text-indent:-9999em;width:164px;}
+.vtexsm-product li:hover{background-position:center bottom;}
+.vtexsm-product li:hover .percent{visibility:visible;}
+.menu-atendimento{border:1px solid #ebebeb;margin-bottom:20px;padding:10px 8px;}
+.menu-atendimento h3{background:#e40000;color:#FFF;font-size:16px;font-weight:normal;line-height:37px;margin:0 0 5px;padding-left:14px;position:relative;}
+.menu-atendimento ul{line-height:26px;margin:0;padding:5px 0;}
+.menu-atendimento li{color:#666;display:block;font-size:14px;padding-left:14px;}
+.menu-atendimento li a{color:#666;}
+.rating-produto,.rating-demonstrativo,.rating-wrapper .rating{background:url(http://www.telhanorte.com.br/arquivos/ratingStar.png) no-repeat;display:block;height:15px;text-indent:-99999em;width:94px;}
+.avaliacao0{background-position:0 0;}
+.avaliacao5{background-position:0 -16px;}
+.avaliacao10{background-position:0 -32px;}
+.avaliacao15{background-position:0 -48px;}
+.avaliacao20{background-position:0 -64px;}
+.avaliacao25{background-position:0 -80px;}
+.avaliacao30{background-position:0 -96px;}
+.avaliacao35{background-position:0 -112px;}
+.avaliacao40{background-position:0 -128px;}
+.avaliacao45{background-position:0 -144px;}
+.avaliacao50{background-position:0 -160px;}
+.a0{background-position:0 0 !important;}
+.a5{background-position:0 -110px !important;}
+.a10{background-position:0 -110px !important;}
+.a15{background-position:0 -125px !important;}
+.a20{background-position:0 -125px !important;}
+.a25{background-position:0 -140px !important;}
+.a30{background-position:0 -140px !important;}
+.a35{background-position:0 -155px !important;}
+.a40{background-position:0 -155px !important;}
+.a45{background-position:0 -170px !important;}
+.a50{background-position:0 -170px !important;}
+.pager{text-align:center;margin:0 auto;}
+.pages *{vertical-align:middle;}
+.pages li{cursor:pointer;color:#666;display:inline-block;*float:left;font-size:12px;}
+.pages .page-number{padding:0px 5px;}
+.pages .pgCurrent{color:#e40000;font-weight:bold;}
+.pages .previous,.pages .next{margin:0 5px 0;}
+.pages .first,.pages .last{background:url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat;height:9px;margin:0;*margin:5px 0 0;text-indent:-99999em;width:6px;}
+.pages .first{background-position:-212px -45px;}
+.pages .last{background-position:-220px -45px;}
+.footerTpl{bottom:0;left:0;position:absolute;width:100%;}
+.footerTplWrapper{background:url(http://www.telhanorte.com.br/arquivos/bgFooter.gif) no-repeat 0 0;height:378px;margin:0 auto;padding:30px 0 0;width:980px;}
+.footerLeft{float:left;width:755px;}
+.footerRight{float:right;margin-right:35px;width:190px;}
+.footerColumns>li{color:#003a89;font-size:12px;float:left;}
+.footerColumns>li.institucional a{color:#003a89;display:block;padding-left:15px;text-decoration:none;}
+.footerColumns>li.institucional a:hover{background:url(http://www.telhanorte.com.br/arquivos/bgLinks.png) repeat 0 0;}
+.footerColumns>li li{line-height:18px;}
+.fCol2{padding:40px 0 0;}
+.footerTpl h4{border-bottom:3px solid #f0d276;color:#e40000;font-size:15px;margin-bottom:15px;padding:0 0 12px 14px;}
+.footerTpl li.institucional{padding-left:30px;width:200px;}
+.footerTpl li.TvTelhanorte{padding-left:40px;width:200px;}
+.footerTpl li.CompraSegura{padding-left:30px;width:200px;}
+.footerTpl li.sac{padding-left:40px;width:200px;}
+.footerTpl li.payment{padding-left:40px;width:440px;}
+.footerTpl li.CompraSegura li{float:left;margin-right:10px;}
+.footerTpl li.sac li{line-height:normal;padding:0 0 10px 14px;}
+.footerTpl li.payment li{float:left;margin:0 10px 10px 0;}
+.footerTpl .stamps{background:url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat;height:36px;width:57px;}
+.footerTpl .stamps1{background-position:0 0;}
+.footerTpl .stamps2{background-position:-59px 0;}
+.footerTpl .stamps3{background-position:-118px 0;}
+.footerTpl .stamps4{background-position:-177px 0;}
+.footerTpl .likeBox{background:#FFF;margin-bottom:10px;}
+.footerTpl .follow{width:190px;}
+.footerTpl .follow li{float:left;margin:0 0 4px 4px;height:32px;width:33px;}
+.footerTpl .follow li:first-child{margin-left:0;}
+.footerTpl .follow a{background:url(http://www.telhanorte.com.br/arquivos/sprite.png) no-repeat;display:block;height:32px;text-indent:-9999em;width:33px;}
+.footerTpl .follow a.twitter{background-position:0 -38px;}
+.footerTpl .follow a.facebook{background-position:-35px -38px;}
+.footerTpl .follow a.vimeo{background-position:-70px -38px;}
+.footerTpl .follow a.wordpress{background-position:-105px -38px;}
+.footerTpl .follow a.rede5{background-position:-140px -38px;}
+.copyrightTpl{height:47px;margin:0 auto;width:980px;}
+.copyrightTpl p{color:#8a8a8a;font-size:11px;line-height:47px;text-align:center;}
+.copyrightTpl p a{color:#8a8a8a;}
+.aviso-erro{background:#f2f2f2 url(http://www.telhanorte.com.br/arquivos/icoAlerta.png) no-repeat 16px 10px;border:1px solid #ebebeb;margin:0 0 20px;padding:15px 15px 15px 56px;}
+.aviso-erro>p{display:none;}
+.carrinho .aviso-erro>p{display:block;}
+.aviso-erro ul{list-style:none;}
+.aviso-erro ul li{color:#e40000 !important;display:block;font-size:12px;padding-top:8px;}
+.aviso-erro ul li:first-child{padding:0;}
+input.error,select.error,textarea.error{border:1px solid #e40000 !important;}
+.produto .jqZoomPup{background:#FFF;border:1px solid #ebebeb;cursor:crosshair;filter:alpha(opacity=60);opacity:0.6;overflow:hidden;z-index:10;}
+.produto .jqZoomPup img{border:0 none;}
+.produto .preload{opacity:0.8;filter:alpha(opacity=80);border:1px solid #CCC;background:#ffffff url(http://www.telhanorte.com.br/arquivos/ajax-loader.gif) center center no-repeat;z-index:110;position:absolute;top:0;left:0;width:100%;height:100%;}
+.produto .jqZoomWindow{background:#FFF;box-shadow:0 1px 2px #ebebeb;color:#FFF;display:block !important;border:1px solid #ebebeb;width:412px !important;height:412px !important;margin:-1px 0 0 0px;top:216px;}

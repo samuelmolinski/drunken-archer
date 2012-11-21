@@ -25,6 +25,7 @@ $this->menu=array(
 		'nome',
 		'email',
 		'cpf',
+		'ddd',
 		'telefone',
 		'cidade',
 		'estado',

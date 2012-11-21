@@ -49,16 +49,9 @@ class SiteController extends Controller
 	/*
 
 	*/
-	public function actionCadastroDeClients() {
+	public function actionCadastroDeClientes() {
 		$this->layout = 'telhaNorte';
-		$this->render('cadastroDeClients', array());
-	}
-	public function actionFaleConosco() {
-		$this->layout = 'telhaNorte';
-		$this->render('faleConosco', array());
-	}
-	public function actionTelevendas() {
-		$this->layout = 'telhaNorte';
+		$this->pageTitle = 'Cadastro De Clientes';
 		$states = Estados::model()->findAll(
 	          array(
 	            'select'=>array('id', 'sigla', 'nome'),
@@ -66,12 +59,86 @@ class SiteController extends Controller
 	            'order'=>'sigla DESC'
 	          )
 	      );
-		d($states[0]->sigla);
-		d($states[0]->nome);
-		//d($states);
 
-		$model = new Televendas();
-		$model -> setScenario('televendas');
+		$model = new CadastroDeClientes();
+		if(isset($_POST['CadastroDeClientes']))
+		{
+			//d($_POST);
+			//$model->attributes=$_POST['CadastroDeClientes'];
+			$model->endereco = $_POST['CadastroDeClientes']['rua'].' '.$_POST['CadastroDeClientes']['endereco'].' '.$_POST['CadastroDeClientes']['n'].' '.$_POST['CadastroDeClientes']['complemento'];
+			$model->nomeCompleto = $_POST['CadastroDeClientes']['nomeCompleto'];
+			$model->bairro = $_POST['CadastroDeClientes']['bairro'];
+			$model->cep = $_POST['CadastroDeClientes']['cep'];
+			$model->email = $_POST['CadastroDeClientes']['email'];
+			$model->cpf = $_POST['CadastroDeClientes']['cpf'];
+			$model->dataDeNascimento = $_POST['CadastroDeClientes']['dataDeNascimento'];
+			$model->sexo = $_POST['CadastroDeClientes']['sexo'];
+			$model->escolaridade = $_POST['CadastroDeClientes']['escolaridade'];
+			$model->profissao = $_POST['CadastroDeClientes']['profissao'];
+			$model->estadaCivil = $_POST['CadastroDeClientes']['estadaCivil'];
+			$model->documentoDeIdentidade = $_POST['CadastroDeClientes']['documentoDeIdentidade'];
+			$model->ddd = $_POST['CadastroDeClientes']['ddd'];
+			$model->telefone = $_POST['CadastroDeClientes']['telefone'];
+			$model->dddc = $_POST['CadastroDeClientes']['dddc'];
+			$model->celular = $_POST['CadastroDeClientes']['celular'];
+			$model->ofertasDeSMS = $_POST['CadastroDeClientes']['ofertasDeSMS'][0];
+			$model->ofertasDeEmail = $_POST['CadastroDeClientes']['ofertasDeEmail'][0];
+			//d($model);
+			//exit;
+			if($model->save()) {
+				$this->redirect(array('site/CadastroDeClientes','msg'=> '1'));
+			}
+				
+		}
+
+		$this->render('cadastroDeClientes', array('model'=>$model, 'states'=> $states));
+	}
+	public function actionFaleConosco() {
+		$this->layout = 'telhaNorte';
+		$this->pageTitle = 'Fale Conosco';
+		$states = Estados::model()->findAll(
+	          array(
+	            'select'=>array('id', 'sigla', 'nome'),
+	            'group'=>'id',
+	            'order'=>'sigla DESC'
+	          )
+	      );
+
+		$model = new FaleConosco;
+		if(isset($_POST['FaleConosco']))
+		{
+			//d($_POST);
+			$model->attributes=$_POST['FaleConosco'];
+			if($model->save()) {
+				$this->redirect(array('site/FaleConosco','msg'=> '1'));
+			}
+				
+		}
+
+		$this->render('faleConosco', array('model'=>$model, 'states'=> $states));
+	}
+	public function actionTelevendas() {
+		$this->layout = 'telhaNorte';
+		$this->pageTitle = 'Televendas';
+		$states = Estados::model()->findAll(
+	          array(
+	            'select'=>array('id', 'sigla', 'nome'),
+	            'group'=>'id',
+	            'order'=>'sigla DESC'
+	          )
+	      );
+
+		$model=new Televendas;
+
+		if(isset($_POST['Televendas']))
+		{
+			$model->attributes=$_POST['Televendas'];
+			if($model->save()) {
+				$this->redirect(array('site/televendas','msg'=> '1'));
+			}
+				
+		}
+
 		$this->render('televendas', array('model'=>$model, 'states'=> $states));
 	}
 
@@ -134,5 +201,14 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+
+	protected function performAjaxValidation($model)
+	{
+	    if(isset($_POST['ajax']) && $_POST['ajax']==='televendas-form')
+	    {
+	        echo CActiveForm::validate($model);
+	        Yii::app()->end();
+	    }
 	}
 }

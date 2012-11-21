@@ -8,6 +8,7 @@
  * @property string $nome
  * @property string $email
  * @property string $cpf
+ * @property integer $ddd
  * @property integer $telefone
  * @property string $cidade
  * @property string $estado
@@ -20,7 +21,7 @@ class FaleConosco extends CActiveRecord
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return faleConosco the static model class
+	 * @return FaleConosco the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -43,13 +44,13 @@ class FaleConosco extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nome, email, cpf, telefone, cidade, estado, loja, assunto, messagem', 'required'),
-			array('telefone, loja', 'numerical', 'integerOnly'=>true),
-			array('nome, email, cidade, estado, assunto', 'length', 'max'=>50),
+			array('nome, email, cpf, ddd, telefone, cidade, estado, loja, assunto, messagem', 'required'),
+			array('estado, cidade, ddd, telefone', 'numerical', 'integerOnly'=>true),
+			array('nome, email, assunto, loja', 'length', 'max'=>50),
 			array('cpf', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nome, email, cpf, telefone, cidade, estado, loja, assunto, messagem', 'safe', 'on'=>'search'),
+			array('id, nome, email, cpf, ddd, telefone, cidade, estado, loja, assunto, messagem', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,7 +74,8 @@ class FaleConosco extends CActiveRecord
 			'id' => 'ID',
 			'nome' => 'Nome',
 			'email' => 'Email',
-			'cpf' => 'Cpf',
+			'cpf' => 'CPF',
+			'ddd' => 'DDD',
 			'telefone' => 'Telefone',
 			'cidade' => 'Cidade',
 			'estado' => 'Estado',
@@ -98,6 +100,7 @@ class FaleConosco extends CActiveRecord
 		$criteria->compare('nome',$this->nome,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('cpf',$this->cpf,true);
+		$criteria->compare('ddd',$this->ddd);
 		$criteria->compare('telefone',$this->telefone);
 		$criteria->compare('cidade',$this->cidade,true);
 		$criteria->compare('estado',$this->estado,true);
