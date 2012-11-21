@@ -82,6 +82,7 @@ class FaleConosco extends CActiveRecord
 			'loja' => 'Loja',
 			'assunto' => 'Assunto',
 			'messagem' => 'Messagem',
+			'time' => 'Data',
 		);
 	}
 

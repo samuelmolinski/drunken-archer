@@ -89,10 +89,12 @@ if(!window.log) {window.log = function() {log.history = log.history || [];log.hi
 				'Televendas[cnpj]': "required",
 				'Televendas[ddd]': {
 					minlength: 2,
+					number: true,
 					required: true,
 				},
 				'Televendas[telefone]': {
 					minlength: 8,
+					number: true,
 					required: true,
 				},
 				'Televendas[estado]': {
@@ -153,10 +155,12 @@ if(!window.log) {window.log = function() {log.history = log.history || [];log.hi
 				'FaleConosco[cpf]': "required",
 				'FaleConosco[ddd]': {
 					minlength: 2,
+					number: true,
 					required: true,
 				},
 				'FaleConosco[telefone]': {
 					minlength: 8,
+					number: true,
 					required: true,
 				},
 				'FaleConosco[estado]': {
@@ -223,27 +227,33 @@ if(!window.log) {window.log = function() {log.history = log.history || [];log.hi
 				'CadastroDeClientes[cep]': {
 					minlength: 5,
 					maxlength: 8,
+					number: true,
 					required: true,
 				},
 				'CadastroDeClientes[cpf]': {
 					minlength: 11,
 					maxlength: 11,
+					number: true,
 					required: true,
 				},
 				'CadastroDeClientes[ddd]': {
 					minlength: 2,
+					number: true,
 					required: true,
 				},
 				'CadastroDeClientes[telefone]': {
 					minlength: 8,
+					number: true,
 					required: true,
 				},
 				'CadastroDeClientes[dddc]': {
 					minlength: 2,
+					number: true,
 					required: true,
 				},
 				'CadastroDeClientes[celular]': {
 					minlength: 8,
+					number: true,
 					required: true,
 				},
 				'CadastroDeClientes[estado]': {

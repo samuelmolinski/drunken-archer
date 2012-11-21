@@ -1,8 +1,8 @@
-<div class="middleContainer">
+<!-- <div class="middleContainer">
 	<div class="pgTitle clearfix">
 		<h2>Cadastro de Clientes</h2>
 	</div>
-</div><!--middleContainer-->
+</div> --><!--middleContainer-->
 <div class="middleContainer">
 	<?php
 		$form = $this -> beginWidget('CActiveForm', array(

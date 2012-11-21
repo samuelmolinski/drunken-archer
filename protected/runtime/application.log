@@ -889,3 +889,97 @@ Stack trace:
 REQUEST_URI=/telhanorte/index.php/Cidades/GetCities
 HTTP_REFERER=http://192.168.0.22/telhanorte/index.php/site/cadastroDeClientes
 ---
+2012/11/21 14:14:43 [error] [php] Undefined index: time (C:\wamp\www\telhanorte\protected\views\site\testEmail.php:13)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(161): SiteController->render()
+#3 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTestEmail()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\telhanorte\index.php(16): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/testEmail
+2012/11/21 14:15:35 [error] [php] Undefined index: time (C:\wamp\www\telhanorte\protected\views\site\testEmail.php:13)
+Stack trace:
+#0 C:\wamp\www\telhanorte\yii\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\telhanorte\yii\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(161): SiteController->render()
+#3 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTestEmail()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\telhanorte\index.php(16): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/testEmail
+2012/11/21 14:33:40 [error] [php] Undefined variable: from (C:\wamp\www\telhanorte\phpmailer.inc.php:259)
+Stack trace:
+#0 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(176): SiteController->sendReport()
+#1 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTestEmail()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#6 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#7 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\wamp\www\telhanorte\index.php(16): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/testEmail
+2012/11/21 14:34:42 [error] [php] Undefined variable: from (C:\wamp\www\telhanorte\phpmailer.inc.php:259)
+Stack trace:
+#0 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(176): SiteController->sendReport()
+#1 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTestEmail()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#6 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#7 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\wamp\www\telhanorte\index.php(16): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/testEmail
+2012/11/21 14:38:03 [error] [php] Undefined variable: From (C:\wamp\www\telhanorte\phpmailer.inc.php:259)
+Stack trace:
+#0 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(176): SiteController->sendReport()
+#1 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTestEmail()
+#2 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#6 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#7 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\wamp\www\telhanorte\index.php(16): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/testEmail
+2012/11/21 14:38:27 [error] [php] fsockopen(): unable to connect to localhost:25 (No connection could be made because the target machine actively refused it.
+) (C:\wamp\www\telhanorte\smtp.inc.php:89)
+Stack trace:
+#0 C:\wamp\www\telhanorte\phpmailer.inc.php(134): phpmailer->smtp_send()
+#1 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(288): phpmailer->Send()
+#2 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(176): SiteController->sendReport()
+#3 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTestEmail()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\telhanorte\index.php(16): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/testEmail
+2012/11/21 15:06:16 [error] [php] fsockopen(): unable to connect to localhost:25 (No connection could be made because the target machine actively refused it.
+) (C:\wamp\www\telhanorte\smtp.inc.php:89)
+Stack trace:
+#0 C:\wamp\www\telhanorte\phpmailer.inc.php(134): phpmailer->smtp_send()
+#1 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(292): phpmailer->Send()
+#2 C:\wamp\www\telhanorte\protected\controllers\SiteController.php(166): SiteController->sendReport()
+#3 C:\wamp\www\telhanorte\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionTestEmail()
+#4 C:\wamp\www\telhanorte\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\telhanorte\yii\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\telhanorte\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(283): SiteController->run()
+#8 C:\wamp\www\telhanorte\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\wamp\www\telhanorte\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\telhanorte\index.php(16): CWebApplication->run()
+REQUEST_URI=/telhanorte/index.php/site/testEmail

@@ -64,9 +64,9 @@ class SiteController extends Controller
 		if(isset($_POST['CadastroDeClientes']))
 		{
 			//d($_POST);
-			//$model->attributes=$_POST['CadastroDeClientes'];
+			$model->attributes=$_POST['CadastroDeClientes'];
 			$model->endereco = $_POST['CadastroDeClientes']['rua'].' '.$_POST['CadastroDeClientes']['endereco'].' '.$_POST['CadastroDeClientes']['n'].' '.$_POST['CadastroDeClientes']['complemento'];
-			$model->nomeCompleto = $_POST['CadastroDeClientes']['nomeCompleto'];
+			/*$model->nomeCompleto = $_POST['CadastroDeClientes']['nomeCompleto'];
 			$model->bairro = $_POST['CadastroDeClientes']['bairro'];
 			$model->cep = $_POST['CadastroDeClientes']['cep'];
 			$model->email = $_POST['CadastroDeClientes']['email'];
@@ -82,11 +82,13 @@ class SiteController extends Controller
 			$model->dddc = $_POST['CadastroDeClientes']['dddc'];
 			$model->celular = $_POST['CadastroDeClientes']['celular'];
 			$model->ofertasDeSMS = $_POST['CadastroDeClientes']['ofertasDeSMS'][0];
-			$model->ofertasDeEmail = $_POST['CadastroDeClientes']['ofertasDeEmail'][0];
+			$model->ofertasDeEmail = $_POST['CadastroDeClientes']['ofertasDeEmail'][0];*/
 			//d($model);
 			//exit;
 			if($model->save()) {
-				$this->redirect(array('site/CadastroDeClientes','msg'=> '1'));
+
+				$this->sendReport($model);
+				$this->redirect(array('site/CadastroDeClientes', 'msg'=> '1'));
 			}
 				
 		}
@@ -110,6 +112,7 @@ class SiteController extends Controller
 			//d($_POST);
 			$model->attributes=$_POST['FaleConosco'];
 			if($model->save()) {
+				$this->sendReport($model);
 				$this->redirect(array('site/FaleConosco','msg'=> '1'));
 			}
 				
@@ -134,6 +137,8 @@ class SiteController extends Controller
 		{
 			$model->attributes=$_POST['Televendas'];
 			if($model->save()) {
+
+				$this->sendReport($model);
 				$this->redirect(array('site/televendas','msg'=> '1'));
 			}
 				
@@ -141,6 +146,26 @@ class SiteController extends Controller
 
 		$this->render('televendas', array('model'=>$model, 'states'=> $states));
 	}
+
+	/*public function actionTestEmail() {
+		$this->layout = 'blank';
+		$model=new CadastroDeClientes;
+		$criteria=new CDbCriteria;
+		$criteria->select='*';  // only select the 'title' column
+		$criteria->condition='id=:ID';
+		$criteria->params=array(':ID'=>1);
+		$model = CadastroDeClientes::model()->find($criteria);
+		$states = Estados::model()->findAll(
+	          array(
+	            'select'=>array('id', 'sigla', 'nome'),
+	            'group'=>'id',
+	            'order'=>'sigla DESC'
+	          )
+	      );
+
+		$this->sendReport($model);
+		$this->render('testEmail', array('model'=>$model, 'states'=> $states));
+	}*/
 
 	/**
 	 * Displays the contact page
@@ -210,5 +235,68 @@ class SiteController extends Controller
 	        echo CActiveForm::validate($model);
 	        Yii::app()->end();
 	    }
+	}
+
+	protected function sendReport($model) {
+
+		if('Televendas' == get_class($model)){
+			$to = 'televendas@telhanorte.com.br';
+			//$to = 'contato@cabanacriacao.com';
+			$fromName = 'Televendas';
+		} elseif('CadastroDeClientes' == get_class($model)){
+			$to = 'atendimento@telhanorte.com.br';
+			//$to = 'contato@cabanacriacao.com';
+			$fromName = 'Cadastro De Clientes';
+		} elseif ('FaleConosco' == get_class($model)){
+			$to = 'atendimento@telhanorte.com.br';
+			//$to = 'contato@cabanacriacao.com';
+			$fromName = 'Fale Conosco';
+		}
+
+		$labels = $model->attributeLabels();
+		$attr = $model->attributes;
+		foreach ($attr as $key => $value) {
+			if(null == $value) {
+				unset($attr[$key]);
+			}
+		}
+		$table = "<table>";
+			foreach ($attr as $key => $value) {
+				if(isset($labels[$key])&&('time'!=$key)){
+					$table .= "<tr><td style='padding: 0.5em 1em;'>". htmlspecialchars($labels[$key]) ."</td><td style='padding: 0.5em 1em;'>". htmlspecialchars($value) ."</td></tr>\n";
+				}
+			}		
+
+		$table .= "</table>";
+
+		$mail             = new PHPMailer(); // defaults to using php "mail()"
+		$mail->CharSet = 'UTF-8';
+		$body             = '<html style="height:100%;" >
+	<head>	
+		<meta charset="UTF-8" />
+	</head>
+	<body bgcolor="#cccccc" style="height:100%; font-family: sans-serif;font-size: 14px;line-height: 1.25;color: #006fa5;">
+		<div style="width:600px;margin:auto;background-color:#efefef;">
+			<div style="width:80%;padding: 10%;"><h2>'.$fromName.'</h2>'.$table.
+			'</div>			
+		</div>
+	</body>
+</html>';
+		$mail->From = 'no-reply@telhanorte.com.br';
+		$mail->FromName = $fromName;
+		$mail->AddReplyTo($attr['email'], 'Novo Contato');
+
+		$mail->IsHTML(true);
+		$mail->IsSMTP(); // telling the class to use SMTP
+		$mail->SMTPAuth   = false;                  // enable SMTP authentication
+		$mail->Username   = "no-reply@telhanorte.com.br"; // SMTP account username
+		$mail->Password   = "telhanorte2012";        // SMTP account password
+
+		$mail->Subject    = 'Novo contato: '.$fromName;
+		$mail->AddAddress($to, 'Telhe Norte'); //$_POST['Newsletter_nome']
+
+		$mail->Body = $body;
+		$s = $mail->Send();	
+		//d($mail);
 	}
 }

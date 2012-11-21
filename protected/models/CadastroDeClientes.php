@@ -110,6 +110,7 @@ class CadastroDeClientes extends CActiveRecord
 			'celular' => 'Celular',
 			'ofertasDeSMS' => 'Ofertas De SMS',
 			'ofertasDeEmail' => 'Ofertas De Email',
+			'time' => 'Data',
 		);
 	}
 

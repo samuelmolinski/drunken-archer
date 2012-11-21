@@ -49,7 +49,7 @@ class Televendas extends CActiveRecord
 			array('email, orcamentoDesejado', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, razaoSocial, cnpj, ddd, telefone, cidade, estado, email, orcamentoDesejado', 'safe', 'on'=>'search'),
+			array('id, razaoSocial, cnpj, ddd, telefone, cidade, estado, email, orcamentoDesejado, time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,6 +79,7 @@ class Televendas extends CActiveRecord
 			'estado' => 'Estado',
 			'email' => 'Email',
 			'orcamentoDesejado' => 'Orçamento Desejado',
+			'time' => 'Data',
 		);
 	}
 
