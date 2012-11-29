@@ -16,13 +16,13 @@ textarea{background:url(http://www.telhanorte.com.br/arquivos/bgInputText.png) r
 input[type=text],select,textarea{border:1px solid #d7d6d7;color:#666;font-size:12px;padding:0 5px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 select{height:28px;padding:3px 3px 3px 5px;}
 #container{padding-top:172px;padding-bottom:475px;}
-.mainTpl{margin:0 auto;position:relative;width:1000px;}
-.middleContainer,.mainContentWrapper{margin:0 auto;width:980px;}
+.mainTpl{margin:0 auto;position:relative;width:938px;}
+.middleContainer,.mainContentWrapper{margin:0 auto;width:938px;}
 .mainContentWrapper{padding-top:172px;padding-bottom:475px;}
-#columnLeft50{float:left;margin:0 15px 0 5px;width:470px;}
-#columnRight50{float:left;margin:0 5px 0 15px;width:470px;}
-#columnLeft{float:left;margin:0 0 0 10px;width:230px;}
-#columnMain{float:left;margin:0 0 0 10px;width:750px;}
+#columnLeft50{float:left;margin:0 15px 0 0px;width:454px;}
+#columnRight50{float:left;margin:0 0px 0 15px;width:454px;}
+#columnLeft{float:left;margin:0;width:230px;}
+#columnMain{float:left;margin:0;width:698px;}
 #headerTpl{left:0;position:absolute;top:0;width:100%;z-index:100;}
 .headerTplWrapper{height:164px;margin:0 auto 8px;position:relative;width:980px;}
 #headerTpl h1,.header-steps h1{float:left;margin:34px 0 0;width:252px;}

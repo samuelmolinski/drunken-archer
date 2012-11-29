@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/blitzer/jquery-ui-1.9.1.custom.css" media="screen" />
 
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.8.2.js" type="text/javascript"></script>
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.validate.js"></script>
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/messages_pt_BR.js"></script>
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.9.1.custom.js"></script>
@@ -36,7 +36,7 @@
 </head>
 
 <body>
-<div id="formDialog" title="Telha Norte">
+<div id="formDialog" title="Telhanorte">
 	<ul class="error"></ul>
 	<div class="success"></div>
 </div>

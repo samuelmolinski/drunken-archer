@@ -60,7 +60,7 @@ class CadastroDeClientes extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('nomeCompleto, endereco, bairro, cep, email, cpf, dataDeNascimento, escolaridade, profissao, estadaCivil, documentoDeIdentidade, ddd, telefone, dddc, celular, ofertasDeSMS, ofertasDeEmail', 'required'),
-			array('estado, cidade, cep,  ddd, telefone, dddc, celular, ofertasDeSMS, ofertasDeEmail', 'numerical', 'integerOnly'=>true),
+			array('cep,  ddd, telefone, dddc, celular, ofertasDeSMS, ofertasDeEmail', 'numerical', 'integerOnly'=>true),
 			array('nomeCompleto, endereco, email, escolaridade, sexo, profissao', 'length', 'max'=>50),
 			array('bairro', 'length', 'max'=>256),
 			array('cpf', 'length', 'max'=>11),

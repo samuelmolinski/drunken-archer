@@ -28,8 +28,12 @@ class CidadesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','getCities'),
+				'actions'=>array('getCities'),
 				'users'=>array('*'),
+			),
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index','view'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -37,7 +41,7 @@ class CidadesController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -171,13 +175,22 @@ class CidadesController extends Controller
 
 	public function actionGetCities() {
 		if(isset($_POST['estado'])) {
+			//d($_POST['estado']);
+
+			$criteria=new CDbCriteria;
+			$criteria->select='id, nome';  // only select the 'title' column
+			$criteria->condition='nome=:nome';
+			$criteria->order='sigla DESC';
+			$criteria->params=array(':nome'=>$_POST['estado']);
+			$estado=Estados::model()->find($criteria);
+			//d($estado->id);
 			$cidades = Cidades::model()->findAll(
 	          array(
 	            'select'=>array('id', 'nome'),
-	            'condition'=>'id_uf='.$_POST['estado'],
+	            'condition'=>'id_uf='.$estado->id,
 	            'order'=>'nome DESC'
 	          )
-	      );
+	      	);
 			echo CJSON::encode($cidades);
 		} else {
 			echo CJSON::encode('error');

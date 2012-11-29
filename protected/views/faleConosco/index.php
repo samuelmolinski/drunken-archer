@@ -7,8 +7,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create FaleConosco', 'url'=>array('create')),
-	array('label'=>'Manage FaleConosco', 'url'=>array('admin')),
+	array('label'=>'Criar FaleConosco', 'url'=>array('create')),
+	array('label'=>'Administrar FaleConosco', 'url'=>array('admin')),
+	array('label'=>'Exportar para Excel', 'url'=>array('export')),
 );
 ?>
 

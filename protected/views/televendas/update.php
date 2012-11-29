@@ -3,19 +3,20 @@
 /* @var $model Televendas */
 
 $this->breadcrumbs=array(
-	'Televendases'=>array('index'),
+	'Televendas'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Televendas', 'url'=>array('index')),
-	array('label'=>'Create Televendas', 'url'=>array('create')),
-	array('label'=>'View Televendas', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Televendas', 'url'=>array('admin')),
+	array('label'=>'Listar Televendas', 'url'=>array('index')),
+	array('label'=>'Criar Televendas', 'url'=>array('create')),
+	array('label'=>'Ver Televendas', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Administrar Televendas', 'url'=>array('admin')),
+	array('label'=>'Exportar para Excel', 'url'=>array('export')),
 );
 ?>
 
-<h1>Update Televendas <?php echo $model->id; ?></h1>
+<h1>Atualizar Televendas <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

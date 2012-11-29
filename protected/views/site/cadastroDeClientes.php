@@ -8,6 +8,7 @@
 		$form = $this -> beginWidget('CActiveForm', array(
 			'id' => 'cadastroDeClientes-form',
 			'enableAjaxValidation' => false,
+			'action' => 'http://telhanorte.com.br/formularios/index.php/site/cadastroDeClientes'
 			//'htmlOptions'=>array('class'=>'cabanaforms')
 		));
 
@@ -85,7 +86,7 @@
 
 			<div class="grp">
 				<?php echo $form->labelEx($model,'estado'); ?>
-				<?php echo $form->dropDownList($model,'estado', CHtml::listData(Estados::model()->findAll(), 'id', 'nome'), array('empty'=>'Selecione um estado')); ?>
+				<?php echo $form->dropDownList($model,'estado', CHtml::listData(Estados::model()->findAll(), 'nome', 'nome'), array('empty'=>'Selecione um estado','autocomplete'=>'off')); ?>
 			</div>
 
 			<div class="grp">
@@ -122,17 +123,99 @@
 
 			<div class="grp">
 				<?php echo $form->labelEx($model,'escolaridade'); ?>
-				<?php echo $form->textField($model, 'escolaridade', array('value'=>'', 'class'=>'fitext required')); ?>
+				<?php echo $form->dropDownList($model, 'escolaridade', array(
+																	'Ensino Fundamental'=>'Ensino Fundamental',
+																	'Ensino Médio'=>'Ensino Médio',
+																	'Superior Incompleto'=>'Superior Incompleto',
+																	'Superior Completo'=>'Superior Completo',
+																	'Pós Graduação'=>'Pós Graduação',
+																	'MBA'=>'MBA',), array('class'=>'', 'options' => array('Ensino Fundamental'=>array('selected'=>true)))); ?>
 			</div>
 
 			<div class="grp">
 				<?php echo $form->labelEx($model,'profissao'); ?>
-				<?php echo $form->textField($model, 'profissao', array('value'=>'', 'class'=>'fitext required')); ?>
+				<?php echo $form->dropDownList($model, 'profissao', array(
+																	'Acionista'=>'Acionista',
+																	'Administrador'=>'Administrador',
+																	'Advogado'=>'Advogado',
+																	'Ambientalista'=>'Ambientalista',
+																	'Ambulante'=>'Ambulante',
+																	'Amolador'=>'Amolador',
+																	'Arquiteto'=>'Arquiteto',
+																	'Artesão'=>'Artesão',
+																	'Atendente'=>'Atendente',
+																	'Atleta'=>'Atleta',
+																	'Atuário'=>'Atuário',
+																	'Ator'=>'Ator',
+																	'Auditor'=>'Auditor',
+																	'Autônomo'=>'Autônomo',
+																	'Auxiliar'=>'Auxiliar',
+																	'Babá'=>'Babá',
+																	'Balconista'=>'Balconista',
+																	'Bancário'=>'Bancário',
+																	'Barbeiro'=>'Barbeiro',
+																	'Bibliotecário'=>'Bibliotecário',
+																	'Biólogo'=>'Biólogo',
+																	'Bombeiro'=>'Bombeiro',
+																	'Cantor'=>'Cantor',
+																	'Cenógrafo'=>'Cenógrafo',
+																	'Consultor'=>'Consultor',
+																	'Costureiro'=>'Costureiro',
+																	'Cozinheiro'=>'Cozinheiro',
+																	'Dancarino'=>'Dançarino',
+																	'Delegado'=>'Delegado',
+																	'Dentista'=>'Dentista',
+																	'Dermatologista'=>'Dermatologista',
+																	'Designer'=>'Designer',
+																	'Despachante'=>'Despachante',
+																	'Doméstico'=>'Doméstico',
+																	'Economista'=>'Economista',
+																	'Empregada Doméstica'=>'Empregada Doméstica',
+																	'Enfermeira/Enfermeiro'=>'Enfermeira/Enfermeiro',
+																	'Engenheiro'=>'Engenheiro',
+																	'Estudante'=>'Estudante',
+																	'Farmacêutico'=>'Farmacêutico',
+																	'Filósofo'=>'Filósofo',
+																	'Fisioterapeuta'=>'Fisioterapeuta',
+																	'Fotógrafo'=>'Fotógrafo',
+																	'Garçom'=>'Garçom',
+																	'Garçonete'=>'Garçonete',
+																	'Gari'=>'Gari',
+																	'Geólogo'=>'Geólogo',
+																	'Jardineiro'=>'Jardineiro',
+																	'Jornalista'=>'Jornalista',
+																	'Juiz/Juíza'=>'Juiz/Juíza',
+																	'Manicure'=>'Manicure',
+																	'Manobrista'=>'Manobrista',
+																	'Massagista'=>'Massagista',
+																	'Médico'=>'Médico',
+																	'Motorista'=>'Motorista',
+																	'Músico'=>'Músico',
+																	'Nutricionista'=>'Nutricionista',
+																	'Bibliotecário'=>'Bibliotecário',
+																	'Biólogo'=>'Biólogo',
+																	'Bombeiro'=>'Bombeiro',
+																	'Office-Boy'=>'Office-Boy',
+																	'Operário'=>'Operário',
+																	'Padeiro'=>'Padeiro',
+																	'Professor'=>'Professor',
+																	'Psicólogo'=>'Psicólogo',
+																	'Publicitário'=>'Publicitário',
+																	'Recepcionista'=>'Recepcionista',
+																	'Secretária/Secretário'=>'Secretária/Secretário',
+																	'Segurança'=>'Segurança',
+																	'Vendedor'=>'Vendedor',
+																	'Veterinário'=>'Veterinário',
+																	'Web Designer'=>'Web Designer',), array('class'=>'')); ?>
 			</div>
-
+			
 			<div class="grp">
 				<?php echo $form->labelEx($model,'estadaCivil'); ?>
-				<?php echo $form->textField($model, 'estadaCivil', array('value'=>'', 'class'=>'fitext required')); ?>
+				<?php echo $form->dropDownList($model, 'estadaCivil', array(
+																	'Solteiro'=>'Solteiro',
+																	'Casado'=>'Casado',
+																	'Divorciado'=>'Divorciado',
+																	'Viúvo'=>'Viúvo',), array('class'=>'', 'options' => array('Solteiro'=>array('selected'=>true)))); ?>
 			</div>
 
 			<div class="grp">

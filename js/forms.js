@@ -27,47 +27,56 @@ if(!window.log) {window.log = function() {log.history = log.history || [];log.hi
 
 		}
 		if($('#Televendas_estado, #CadastroDeClientes_estado, #FaleConosco_estado').val() != '') {
+
+			log('calling ajax (init)');
+			var param = {'estado': $(this).val()};
+			log(param);
 			$.ajax({
-				url: 'http://telhanorte.hospedagemdesites.ws/formularios/index.php/Cidades/GetCities',
+				url: 'http://telhanorte.com.br/formularios/index.php/Cidades/GetCities',
+				//url: 'http://telhanorte.hospedagemdesites.ws/formularios/index.php/Cidades/GetCities',
 				//url: 'http://192.168.0.22/telhanorte/index.php/Cidades/GetCities',
 				type: 'post',
-				data: {'estado': $(this).val()},
+				data: param,
 				dataType: "json",
-				async: false,
+				//async: false,
 				success: function(ret) {
-					window.console.log(ret);
+					log(ret);
 					$('#Televendas_cidade option, #CadastroDeClientes_cidade option, #FaleConosco_cidade option').remove();
 					for (var i = ret.length - 1; i >= 0; i--) {
-						opt = '<option value="'+ret[i].id+'">'+ret[i].nome+'</option>';
+						opt = '<option value="'+ret[i].nome+'">'+ret[i].nome+'</option>';
 						$("#Televendas_cidade, #FaleConosco_cidade, #CadastroDeClientes_cidade").append(opt);
 					};
 				},
 			    error: function(XMLHttpRequest, textStatus, errorThrown){
-					window.console.log(XMLHttpRequest, textStatus, errorThrown);
+					log(XMLHttpRequest, textStatus, errorThrown);
 			    }
 			});
 		}
 		$('#Televendas_estado, #CadastroDeClientes_estado, #FaleConosco_estado').change(function(){
-			window.console.log('change...');
+			//window.console.log('change...');
+			log('calling ajax (change)');
+			var param = {'estado': $(this).val()};
+			log(param);
 			$.ajax({
-				url: 'http://telhanorte.hospedagemdesites.ws/formularios/index.php/Cidades/GetCities',
+				url: 'http://telhanorte.com.br/formularios/index.php/Cidades/GetCities',
+				//url: 'http://telhanorte.hospedagemdesites.ws/formularios/index.php/Cidades/GetCities',
 				//url: 'http://192.168.0.22/telhanorte/index.php/Cidades/GetCities',
 				type: 'post',
-				data: {'estado': $(this).val()},
+				data: param,
 				dataType: "json",
-				async: false,
+				//async: false,
 				success: function(ret) {
-					window.console.log(ret);
+					log(ret);
 					$('#Televendas_cidade option, #CadastroDeClientes_cidade option, #FaleConosco_cidade option').remove();
 					for (var i = ret.length - 1; i >= 0; i--) {
-						opt = '<option value="'+ret[i].id+'">'+ret[i].nome+'</option>';
+						opt = '<option value="'+ret[i].nome+'">'+ret[i].nome+'</option>';
 						$("#Televendas_cidade, #FaleConosco_cidade, #CadastroDeClientes_cidade").append(opt);
 						//window.console.log(ret[i].id);
 						//window.console.log(ret[i].nome);
 					};
 				},
 			    error: function(XMLHttpRequest, textStatus, errorThrown){
-					window.console.log(XMLHttpRequest, textStatus, errorThrown);
+					log(XMLHttpRequest, textStatus, errorThrown);
 			    }
 			});
 		})

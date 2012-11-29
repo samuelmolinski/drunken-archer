@@ -9,6 +9,7 @@
 		$form = $this -> beginWidget('CActiveForm', array(
 			'id'=>'televendas-form',
 			'enableAjaxValidation' => false,
+			'action' => 'http://telhanorte.com.br/formularios/index.php/site/televendas'
 		));
 	?>
 	<!-- <?php echo $form->errorSummary($model); ?>-->
@@ -33,7 +34,7 @@
 		</div>
 		<div class="grp">
 			<?php echo $form->labelEx($model,'estado'); ?>
-			<?php echo $form->dropDownList($model,'estado', CHtml::listData(Estados::model()->findAll(), 'id', 'nome'), array('empty'=>'Selecione um estado')); ?>
+			<?php echo $form->dropDownList($model,'estado', CHtml::listData(Estados::model()->findAll(), 'nome', 'nome'), array('empty'=>'Selecione um estado','autocomplete'=>'off')); ?>
 			<!-- <?php echo $form->error($model,'estado'); ?> -->
 		</div>
 	</div>
@@ -50,7 +51,7 @@
 		</div>
 		<div class="grp">
 			<?php echo $form->labelEx($model,'orcamentoDesejado'); ?>
-			<?php echo $form->textField($model, 'orcamentoDesejado', array('class'=>'fitext required')); ?>
+			<?php echo $form->textArea($model, 'orcamentoDesejado', array('class'=>'fitext required')); ?>
 			<!-- <?php echo $form->error($model,'orcamentoDesejado'); ?> -->
 		</div>
 

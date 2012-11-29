@@ -3,16 +3,17 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Televendases',
+	'Televendas',
 );
 
 $this->menu=array(
-	array('label'=>'Create Televendas', 'url'=>array('create')),
-	array('label'=>'Manage Televendas', 'url'=>array('admin')),
+	array('label'=>'Criar Televendas', 'url'=>array('create')),
+	array('label'=>'Administrar Televendas', 'url'=>array('admin')),
+	array('label'=>'Exportar para Excel', 'url'=>array('export')),
 );
 ?>
 
-<h1>Televendases</h1>
+<h1>Televendas</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

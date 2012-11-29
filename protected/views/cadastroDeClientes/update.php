@@ -9,13 +9,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List CadastroDeClientes', 'url'=>array('index')),
-	array('label'=>'Create CadastroDeClientes', 'url'=>array('create')),
-	array('label'=>'View CadastroDeClientes', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage CadastroDeClientes', 'url'=>array('admin')),
+	array('label'=>'Listar CadastroDeClientes', 'url'=>array('index')),
+	array('label'=>'Criar CadastroDeClientes', 'url'=>array('create')),
+	array('label'=>'Ver CadastroDeClientes', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Administrar CadastroDeClientes', 'url'=>array('admin')),
+	array('label'=>'Exportar para Excel', 'url'=>array('export')),
 );
 ?>
 
-<h1>Update CadastroDeClientes <?php echo $model->id; ?></h1>
+<h1>Atualizar CadastroDeClientes <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -8,11 +8,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List FaleConosco', 'url'=>array('index')),
-	array('label'=>'Manage FaleConosco', 'url'=>array('admin')),
+	array('label'=>'Listar FaleConosco', 'url'=>array('index')),
+	array('label'=>'Administrar FaleConosco', 'url'=>array('admin')),
+	array('label'=>'Exportar para Excel', 'url'=>array('export')),
 );
 ?>
 
-<h1>Create FaleConosco</h1>
+<h1>Criar FaleConosco</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

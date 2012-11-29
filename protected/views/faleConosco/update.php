@@ -9,13 +9,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List FaleConosco', 'url'=>array('index')),
-	array('label'=>'Create FaleConosco', 'url'=>array('create')),
-	array('label'=>'View FaleConosco', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage FaleConosco', 'url'=>array('admin')),
+	array('label'=>'Listar FaleConosco', 'url'=>array('index')),
+	array('label'=>'Criar FaleConosco', 'url'=>array('create')),
+	array('label'=>'Ver FaleConosco', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Administrar FaleConosco', 'url'=>array('admin')),
+	array('label'=>'Exportar para Excel', 'url'=>array('export')),
 );
 ?>
 
-<h1>Update FaleConosco <?php echo $model->id; ?></h1>
+<h1>Atualizar FaleConosco <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

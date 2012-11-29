@@ -51,6 +51,7 @@
 		$form = $this -> beginWidget('CActiveForm', array(
 			'id' => 'faleConosco-form',
 			'enableAjaxValidation' => false,
+			'action' => 'http://telhanorte.com.br/formularios/index.php/site/faleconosco'
 		));
 
 	?>
@@ -85,7 +86,7 @@
 
 		<div class="grp">
 			<?php echo $form->labelEx($model,'estado'); ?>
-			<?php echo $form->dropDownList($model,'estado', CHtml::listData(Estados::model()->findAll(), 'id', 'nome'), array('empty'=>'Selecione um estado')); ?>
+			<?php echo $form->dropDownList($model,'estado', CHtml::listData(Estados::model()->findAll(), 'nome', 'nome'), array('empty'=>'Selecione um estado','autocomplete'=>'off')); ?>
 			<!-- <?php echo $form->error($model,'estado'); ?> -->
 		</div>
 

@@ -28,8 +28,8 @@ class CadastroDeClientesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'actions'=>array('index','view', 'export'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -37,7 +37,7 @@ class CadastroDeClientesController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -141,6 +141,70 @@ class CadastroDeClientesController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+
+
+	/**
+	 * Export all models to Excel.
+	 */
+	public function actionExport()
+	{
+		$model=new CadastroDeClientes();
+		$model->unsetAttributes();  // clear any default values
+		$models = CadastroDeClientes::model()->findAll();
+
+		$labels = $model->attributeLabels();
+
+		$d = date("Y-m-d-Hi");
+		$report = array(array());
+		foreach ($labels as $k => $t) {
+			$report[0][] = $t;
+		}
+		foreach ($models as $k => $tele) {
+			$attr = array();
+			foreach ($tele->attributes as $y => $a) {
+				$attr[] = $a;
+			}
+			$report[] = $attr;
+		}
+
+		// Create new PHPExcel object
+		$objPHPExcel = new PHPExcel();
+
+		// Set document properties
+		$objPHPExcel->getProperties()->setCreator("Telhanorte")
+									 ->setLastModifiedBy("Telhanorte")
+									 ->setTitle("Office 2007 XLSX Document")
+									 ->setSubject("Office 2007 XLSX Document")
+									 ->setDescription("Cadastro de clientes informação")
+									 ->setKeywords("cadastro de clientes")
+									 ->setCategory("Cadastro de Clientes");
+		// Add some data
+		$i = 1;	
+		foreach($report as $k => $tele) {
+			$k = 1;
+			foreach ($tele as $y => $a) {
+				$objPHPExcel->getActiveSheet()->setCellValue(chr(64+$k) . $i, $a);
+				$k++;
+			}		
+			$i++;	
+		}
+
+		// Rename worksheet
+		$objPHPExcel->getActiveSheet()->setTitle("Cadastro de Clientes");
+
+		// Set active sheet index to the first sheet, so Excel opens this as the first sheet
+		$objPHPExcel->setActiveSheetIndex(0);
+
+		// Redirect output to a client’s web browser (Excel2007)
+		header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		header("Content-Disposition: attachment;filename='CadastroDeClientes_$d.xlsx'");
+		header('Cache-Control: max-age=0');
+
+		$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+		$objWriter->save('php://output');
+
+		Yii::app()->end();
 	}
 
 	/**

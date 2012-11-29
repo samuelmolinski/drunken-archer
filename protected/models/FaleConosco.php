@@ -45,7 +45,7 @@ class FaleConosco extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('nome, email, cpf, ddd, telefone, cidade, estado, loja, assunto, messagem', 'required'),
-			array('estado, cidade, ddd, telefone', 'numerical', 'integerOnly'=>true),
+			array('ddd, telefone', 'numerical', 'integerOnly'=>true),
 			array('nome, email, assunto, loja', 'length', 'max'=>50),
 			array('cpf', 'length', 'max'=>11),
 			// The following rule is used by search().

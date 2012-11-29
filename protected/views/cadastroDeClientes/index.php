@@ -7,8 +7,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create CadastroDeClientes', 'url'=>array('create')),
-	array('label'=>'Manage CadastroDeClientes', 'url'=>array('admin')),
+	array('label'=>'Criar CadastroDeClientes', 'url'=>array('create')),
+	array('label'=>'Administrar CadastroDeClientes', 'url'=>array('admin')),
+	array('label'=>'Exportar para Excel', 'url'=>array('export')),
 );
 ?>
 

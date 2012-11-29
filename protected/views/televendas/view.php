@@ -3,20 +3,21 @@
 /* @var $model Televendas */
 
 $this->breadcrumbs=array(
-	'Televendases'=>array('index'),
+	'Televendas'=>array('index'),
 	$model->id,
 );
 
 $this->menu=array(
-	array('label'=>'List Televendas', 'url'=>array('index')),
-	array('label'=>'Create Televendas', 'url'=>array('create')),
-	array('label'=>'Update Televendas', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Televendas', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Televendas', 'url'=>array('admin')),
+	array('label'=>'Listar Televendas', 'url'=>array('index')),
+	array('label'=>'Criar Televendas', 'url'=>array('create')),
+	array('label'=>'Atualizar Televendas', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Apagar Televendas', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Tem certeza que deseja apagar este item?')),
+	array('label'=>'Administrar Televendas', 'url'=>array('admin')),
+	array('label'=>'Exportar para Excel', 'url'=>array('export')),
 );
 ?>
 
-<h1>View Televendas #<?php echo $model->id; ?></h1>
+<h1>Ver Televendas #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

@@ -3,16 +3,17 @@
 /* @var $model Televendas */
 
 $this->breadcrumbs=array(
-	'Televendases'=>array('index'),
+	'Televendas'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List Televendas', 'url'=>array('index')),
-	array('label'=>'Manage Televendas', 'url'=>array('admin')),
+	array('label'=>'Listar Televendas', 'url'=>array('index')),
+	array('label'=>'Administrar Televendas', 'url'=>array('admin')),
+	array('label'=>'Exportar para Excel', 'url'=>array('export')),
 );
 ?>
 
-<h1>Create Televendas</h1>
+<h1>Criar Televendas</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

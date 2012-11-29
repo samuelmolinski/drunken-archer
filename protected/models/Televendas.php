@@ -43,10 +43,10 @@ class Televendas extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('razaoSocial, cnpj, ddd, telefone, cidade, estado, email, orcamentoDesejado', 'required'),
-			array('estado, cidade, ddd, telefone', 'numerical', 'integerOnly'=>true),
+			array('ddd, telefone', 'numerical', 'integerOnly'=>true),
 			array('razaoSocial', 'length', 'max'=>100),
 			array('cnpj', 'length', 'max'=>20),
-			array('email, orcamentoDesejado', 'length', 'max'=>50),
+			array('email', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, razaoSocial, cnpj, ddd, telefone, cidade, estado, email, orcamentoDesejado, time', 'safe', 'on'=>'search'),

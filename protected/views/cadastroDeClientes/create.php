@@ -8,11 +8,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List CadastroDeClientes', 'url'=>array('index')),
-	array('label'=>'Manage CadastroDeClientes', 'url'=>array('admin')),
+	array('label'=>'Listar CadastroDeClientes', 'url'=>array('index')),
+	array('label'=>'Administrar CadastroDeClientes', 'url'=>array('admin')),
+	array('label'=>'Exportar para Excel', 'url'=>array('export')),
 );
 ?>
 
-<h1>Create CadastroDeClientes</h1>
+<h1>Criar CadastroDeClientes</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

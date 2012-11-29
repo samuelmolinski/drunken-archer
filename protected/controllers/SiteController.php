@@ -240,15 +240,18 @@ class SiteController extends Controller
 	protected function sendReport($model) {
 
 		if('Televendas' == get_class($model)){
-			$to = 'televendas@telhanorte.com.br';
+			//$to = 'televendas@telhanorte.com.br';
 			//$to = 'contato@cabanacriacao.com';
+			$to = 'Natalia.Marri@saint-gobain.com';
 			$fromName = 'Televendas';
 		} elseif('CadastroDeClientes' == get_class($model)){
-			$to = 'atendimento@telhanorte.com.br';
+			//$to = 'atendimento@telhanorte.com.br';
 			//$to = 'contato@cabanacriacao.com';
+			$to = 'Natalia.Marri@saint-gobain.com';
 			$fromName = 'Cadastro De Clientes';
 		} elseif ('FaleConosco' == get_class($model)){
-			$to = 'atendimento@telhanorte.com.br';
+			//$to = 'atendimento@telhanorte.com.br';
+			$to = 'Natalia.Marri@saint-gobain.com';
 			//$to = 'contato@cabanacriacao.com';
 			$fromName = 'Fale Conosco';
 		}

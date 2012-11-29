@@ -1,7 +1,7 @@
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}
 audio[controls],canvas,video{display:inline-block;*display:inline;zoom:1;}
 html{font-size:100%;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-body{background:#FFF;color:#666;line-height:1;font-size:12px;height:auto;margin:0;min-height:100%;min-width:1000px;position:relative;}
+body{background:#FFF;color:#666;line-height:1;font-size:12px;height:auto;margin:0;min-height:100%;min-width:938px;position:relative;}
 body,button,input,select,textarea{font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;}
 img{margin:0;vertical-align:top;border:0;-ms-interpolation-mode:bicubic;}
 embed,object{outline:none;}

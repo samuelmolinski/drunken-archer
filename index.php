@@ -11,6 +11,8 @@ $config=dirname(__FILE__).'/protected/config/main.php';
 
 require_once('phpmailer.inc.php');
 require_once('m_super_dump.php');
+//require_once('class.export_excel.php');
+require_once('PHPExcel.php');
 
 require_once($yii);
 Yii::createWebApplication($config)->run();
